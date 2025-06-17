@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cx7sqcxxnh4vb"]
+
+[ext_resource type="PackedScene" uid="uid://dan5ey75svafx" path="res://Items/ItemBase.tscn" id="1_ysloc"]
+[ext_resource type="Script" uid="uid://cwq6fhvbbdruo" path="res://Items/AngelsBlessing/angels_blessing.gd" id="2_0k0xe"]
+[ext_resource type="Texture2D" uid="uid://dtr8a3j2xqyaq" path="res://Items/AngelsBlessing/assets/angelsblessing.png" id="2_ysloc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0k0xe"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_562qw"]
+radius = 8.0
+
+[node name="AngelsBlessing" instance=ExtResource("1_ysloc")]
+freeze_mode = 0
+script = ExtResource("2_0k0xe")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_0k0xe")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_ysloc")
+
+[node name="CollisionShape2D" parent="PickupCollider" index="0"]
+shape = SubResource("CircleShape2D_562qw")
+
+[node name="ImmunityTimer" type="Timer" parent="." index="3"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://d136yah271w31"]
+
+[ext_resource type="Script" uid="uid://y427taqpxjcb" path="res://Items/AztecDeathWhistle/aztec_death_whistle_flash.gd" id="1_0giyq"]
+
+[node name="AztecDeathWhistleFlash" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -500.0
+offset_right = 499.0
+offset_bottom = 499.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_0giyq")
+
+[node name="FlashTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="FlashTimer" to="." method="_on_flash_timer_timeout"]

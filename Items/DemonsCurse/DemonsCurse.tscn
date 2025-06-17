@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb8ey6wgx2ha2"]
+
+[ext_resource type="PackedScene" uid="uid://dan5ey75svafx" path="res://Items/ItemBase.tscn" id="1_4rnb0"]
+[ext_resource type="Script" uid="uid://c5swhcvgglsbj" path="res://Items/DemonsCurse/demons_curse.gd" id="2_dd77h"]
+[ext_resource type="Texture2D" uid="uid://cg5p0h0vpbhw3" path="res://Items/DemonsCurse/assets/demonscurse.png" id="3_0lmli"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qqndq"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sv5g1"]
+radius = 8.0
+
+[node name="DemonsCurse" instance=ExtResource("1_4rnb0")]
+freeze_mode = 0
+script = ExtResource("2_dd77h")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_qqndq")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_0lmli")
+
+[node name="CollisionShape2D" parent="PickupCollider" index="0"]
+shape = SubResource("CircleShape2D_sv5g1")

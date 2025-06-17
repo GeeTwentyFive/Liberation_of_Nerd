@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://clstkkq6qi5uo"]
+
+[ext_resource type="Script" uid="uid://bxityxyk0y652" path="res://Items/Electromagnet/electromagnet_shake.gd" id="1_etctm"]
+
+[node name="ElectromagnetShake" type="Timer"]
+one_shot = true
+autostart = true
+script = ExtResource("1_etctm")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

@@ -1,0 +1,51 @@
+== Inheritance hierarchy ==
+EntityBase:
+	Player
+	EnemyBase:
+		Chicken
+	ItemBase:
+		AngelsBlessing
+		DemonsCurse
+	WeaponBase:
+		DDD
+
+EntityBase is the base scene for all things that move
+GameManager is for component composition and dependency injection
+
+NO PROJECTILE SPEED - just inherit player's linear velocity
+
+TODO:
+- Implement (from design doc):
+	- Enemies:
+		- Goat (charge)
+		- Cow (tank)
+		- Ghost (circle-walk)
+		- Demon (ranged scythe boomerang + fast-circling + if close enough; backing-off)
+		- Cultist (healer + fast-backing-off)
+	- Weapons:
+		- Vibrating Shark Tooth
+		- Cursed Fish
+		- Bottomless Chicken Pouch
+		- Shooty Thingamabob
+	- Bosses:
+		- Boris
+		- Sharkteeth
+		- Fish
+		- Gunshot
+		- Nerd
+- Make custom TileSet with:
+	- Player
+	- Enemies
+	- Weapons
+	- Items
+- Design map in draw.io:
+	- Make starter room ("Move", "Attack", "Use Item", "Drop/Throw Item", "Restart")
+- Implement Map design (TileMap + enemies, weapons, & items)
+- Implement player power persistence (if player chooses loop):
+	1) Move to parent node (GameManager)
+	2) Reload Map scene
+	3) Get transform of player in reloaded Map scene
+	4) Set same transform to moved player
+	5) Move player back into reloaded Map scene
+- SFX (Deep sine wave for railgun)
+- Music (General is chiller, boss is more IMPACTFUL)

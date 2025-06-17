@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bf81snco5lar4"]
+
+[ext_resource type="PackedScene" uid="uid://dan5ey75svafx" path="res://Items/ItemBase.tscn" id="1_73gax"]
+[ext_resource type="Script" uid="uid://beleqrho8rmdw" path="res://Items/Electromagnet/electromagnet.gd" id="2_a08m5"]
+[ext_resource type="Texture2D" uid="uid://cjaoac4sy33bw" path="res://Items/Electromagnet/assets/electromagnet.png" id="3_kwyly"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6hlrx"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ixli2"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kwyly"]
+radius = 16.0
+
+[node name="Electromagnet" instance=ExtResource("1_73gax")]
+script = ExtResource("2_a08m5")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_6hlrx")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_kwyly")
+
+[node name="CollisionShape2D" parent="PickupCollider" index="0"]
+shape = SubResource("CircleShape2D_ixli2")
+
+[node name="SlowCollider" type="Area2D" parent="." index="3"]
+collision_layer = 0
+collision_mask = 16
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlowCollider" index="0"]
+shape = SubResource("CircleShape2D_kwyly")
+
+[connection signal="body_entered" from="SlowCollider" to="." method="_on_slow_collider_body_entered"]
+[connection signal="body_exited" from="SlowCollider" to="." method="_on_slow_collider_body_exited"]

@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw4sfeund3w7s"]
+
+[ext_resource type="Script" uid="uid://stu6ior3stj1" path="res://Player/player.gd" id="1_84i0o"]
+[ext_resource type="PackedScene" uid="uid://dy74uem5hkkcd" path="res://EntityBase.tscn" id="1_tok1r"]
+[ext_resource type="Texture2D" uid="uid://b7ab8q4wfhe4d" path="res://Player/assets/player_sprite.png" id="1_udipg"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tok1r"]
+friction = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u5ot6"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2gshp"]
+radius = 9.0
+
+[node name="Player" instance=ExtResource("1_tok1r")]
+collision_layer = 8
+collision_mask = 112
+physics_material_override = SubResource("PhysicsMaterial_tok1r")
+can_sleep = false
+script = ExtResource("1_84i0o")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_u5ot6")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("1_udipg")
+
+[node name="HurtCollider" type="Area2D" parent="." index="2"]
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCollider" index="0"]
+shape = SubResource("CircleShape2D_2gshp")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." index="3"]
+current = true
+
+[node name="Camera2D" type="Camera2D" parent="." index="4"]
+position_smoothing_enabled = true
+
+[connection signal="body_entered" from="HurtCollider" to="." method="_on_hurt_collider_body_entered"]

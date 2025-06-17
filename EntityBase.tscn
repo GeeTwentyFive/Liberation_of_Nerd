@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy74uem5hkkcd"]
+
+[ext_resource type="Script" uid="uid://ctbnx50myy4j7" path="res://entity_base.gd" id="1_26w1v"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_26w1v"]
+friction = 0.0
+bounce = 1.0
+
+[node name="EntityBase" type="RigidBody2D"]
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_26w1v")
+lock_rotation = true
+freeze_mode = 1
+continuous_cd = 2
+script = ExtResource("1_26w1v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

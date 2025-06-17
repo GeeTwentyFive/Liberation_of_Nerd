@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dan5ey75svafx"]
+
+[ext_resource type="PackedScene" uid="uid://dy74uem5hkkcd" path="res://EntityBase.tscn" id="1_wqhjd"]
+[ext_resource type="Script" uid="uid://blg1onxnppjmx" path="res://Items/item_base.gd" id="2_g2dr1"]
+
+[node name="ItemBase" instance=ExtResource("1_wqhjd")]
+collision_layer = 64
+collision_mask = 120
+script = ExtResource("2_g2dr1")
+
+[node name="PickupCollider" type="Area2D" parent="." index="2"]
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupCollider" index="0"]
+
+[connection signal="body_entered" from="PickupCollider" to="." method="_on_pickup_collider_body_entered"]

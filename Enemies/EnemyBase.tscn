@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcps58mngvkag"]
+
+[ext_resource type="PackedScene" uid="uid://dy74uem5hkkcd" path="res://EntityBase.tscn" id="1_bq4py"]
+[ext_resource type="Script" uid="uid://btrhbunsfsmlx" path="res://Enemies/enemy_base.gd" id="2_6ijjn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ijjn"]
+bg_color = Color(0, 0, 0, 0.501961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tflo0"]
+bg_color = Color(1, 0, 0, 0.501961)
+
+[node name="EnemyBase" instance=ExtResource("1_bq4py")]
+process_mode = 4
+collision_layer = 20
+collision_mask = 120
+script = ExtResource("2_6ijjn")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." index="2"]
+rect = Rect2(-8, -8, 16, 16)
+
+[node name="HealthBar" type="ProgressBar" parent="." index="3"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.5)
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_6ijjn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_tflo0")
+step = 1.0
+value = 100.0
+rounded = true
+show_percentage = false
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]

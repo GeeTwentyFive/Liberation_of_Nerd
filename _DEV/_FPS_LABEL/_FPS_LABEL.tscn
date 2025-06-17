@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://n7vgexk14gwu"]
+
+[ext_resource type="Script" uid="uid://ce5ksc7e28pm5" path="res://_DEV/_FPS_LABEL/_fps_label.gd" id="1_ucjy4"]
+
+[node name="FpsLabel" type="Label"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+script = ExtResource("1_ucjy4")
