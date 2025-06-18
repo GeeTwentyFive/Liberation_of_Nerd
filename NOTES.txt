@@ -15,6 +15,9 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
+- FIX WEAPONS NOT DROPPING EXACTLY BEHIND (weapons_base.gd)
+- ^ REFACTOR ITEM DROP SO IT'S NOT "global_position +=", BUT JUST "="
+- SCALE PROJECTILE DAMAGE BASED ON SPEED
 - Implement (from design doc):
 	- Enemies:
 		- Goat (charge)

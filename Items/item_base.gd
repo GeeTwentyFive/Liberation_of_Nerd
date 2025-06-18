@@ -3,7 +3,7 @@ extends Entity
 
 
 const PICKED_UP_ALPHA = 0.2
-const THROW_POSITION_OFFSET_MULTIPLIER = 1.4
+const DROP_OFFSET_MULTIPLIER = 1.4
 
 
 var holder: Player = null
@@ -29,24 +29,24 @@ func pick_up(player: Player):
 	if player.held_item != null: return
 	holder = player
 	player.held_item = self
-	collision_shape.disabled = true
-	add_collision_exception_with(holder)
-	collision_shape.scale = Vector2(0.5, 0.5)
 	sprite.modulate.a = PICKED_UP_ALPHA
+	(func(): collision_shape.disabled = true).call_deferred()
 	apply_passive()
 
 func drop():
 	remove_passive()
+	var drop_vector: Vector2 = holder.linear_velocity
+	var drop_offset: Vector2 = holder.collision_shape.shape.get_rect().size
+	(func():
+		global_position += ( # TODO: Refactor
+			drop_vector.normalized() *
+			drop_offset *
+			DROP_OFFSET_MULTIPLIER
+		)
+		apply_central_impulse(drop_vector)
+		collision_shape.disabled = false
+	).call_deferred()
 	sprite.modulate.a = 1.0
-	collision_shape.scale = Vector2.ONE
-	remove_collision_exception_with(holder)
-	collision_shape.disabled = false
-	global_position += (
-		holder.linear_velocity.normalized() *
-		holder.collision_shape.shape.get_rect().size *
-		THROW_POSITION_OFFSET_MULTIPLIER
-	)
-	apply_central_impulse(holder.linear_velocity)
 	holder.held_item = null
 	holder = null
 

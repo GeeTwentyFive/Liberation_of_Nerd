@@ -1,13 +1,8 @@
-[gd_scene load_steps=12 format=4 uid="uid://dwsqcidjasrqm"]
+[gd_scene load_steps=7 format=4 uid="uid://dwsqcidjasrqm"]
 
 [ext_resource type="PackedScene" uid="uid://bax31bel402kg" path="res://Enemies/Chicken/Chicken.tscn" id="1_7s3fs"]
 [ext_resource type="Texture2D" uid="uid://dbr0shufbqkg4" path="res://Map/assets/roguelikeDungeon_transparent.png" id="1_vxmom"]
 [ext_resource type="PackedScene" uid="uid://cw4sfeund3w7s" path="res://Player/Player.tscn" id="2_2623n"]
-[ext_resource type="PackedScene" uid="uid://cx7sqcxxnh4vb" path="res://Items/AngelsBlessing/AngelsBlessing.tscn" id="3_2623n"]
-[ext_resource type="PackedScene" uid="uid://bb8ey6wgx2ha2" path="res://Items/DemonsCurse/DemonsCurse.tscn" id="5_qtvud"]
-[ext_resource type="PackedScene" uid="uid://dvo5t0a2mlwb0" path="res://Items/ExpertLure/ExpertLure.tscn" id="6_nyy2o"]
-[ext_resource type="PackedScene" uid="uid://bf81snco5lar4" path="res://Items/Electromagnet/Electromagnet.tscn" id="7_ypc4v"]
-[ext_resource type="PackedScene" uid="uid://c0qyfsrx8rhk8" path="res://Items/AztecDeathWhistle/AztecDeathWhistle.tscn" id="8_6od3y"]
 [ext_resource type="PackedScene" uid="uid://spnll70lgth6" path="res://Weapons/VibratingSharkTooth/VibratingSharkTooth.tscn" id="9_vxmom"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlecm"]
@@ -34,31 +29,15 @@ occlusion_enabled = false
 position = Vector2(150, 150)
 freeze_mode = 0
 
-[node name="AngelsBlessing" parent="." instance=ExtResource("3_2623n")]
-position = Vector2(50, 50)
-
-[node name="AngelsBlessing2" parent="." instance=ExtResource("3_2623n")]
-position = Vector2(150, 40)
-
-[node name="DemonsCurse" parent="." instance=ExtResource("5_qtvud")]
-position = Vector2(126, 46)
-
 [node name="Chicken" parent="." instance=ExtResource("1_7s3fs")]
+visible = false
 position = Vector2(-41, 160)
 freeze_mode = 0
 
 [node name="Chicken2" parent="." instance=ExtResource("1_7s3fs")]
+visible = false
 position = Vector2(-41, 114)
 freeze_mode = 0
-
-[node name="ExpertLure" parent="." instance=ExtResource("6_nyy2o")]
-position = Vector2(162, 70)
-
-[node name="Electromagnet" parent="." instance=ExtResource("7_ypc4v")]
-position = Vector2(135, 88)
-
-[node name="AztecDeathWhistle" parent="." instance=ExtResource("8_6od3y")]
-position = Vector2(74, 71)
 
 [node name="VibratingSharkTooth" parent="." instance=ExtResource("9_vxmom")]
 position = Vector2(74, 29)

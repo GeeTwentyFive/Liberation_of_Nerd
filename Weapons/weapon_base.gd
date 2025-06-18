@@ -30,18 +30,21 @@ func pick_up(player: Player):
 		player.held_weapon.drop()
 	holder = player
 	player.held_weapon = self
-	collision_shape.disabled = true
-	add_collision_exception_with(holder)
-	collision_shape.scale = Vector2(0.5, 0.5)
 	sprite.visible = false
+	(func():collision_shape.disabled = true).call_deferred()
 
 func drop():
-	global_position = holder.global_position
-	global_rotation = 0
+	var drop_position: Vector2 = ( # TODO: FIX
+		holder.global_position +
+		-holder.linear_velocity.normalized() *
+		holder.collision_shape.shape.get_rect().size * 1.5
+	)
+	(func():
+		global_position = drop_position
+		global_rotation = 0
+		collision_shape.disabled = false
+	).call_deferred()
 	sprite.visible = true
-	collision_shape.scale = Vector2.ONE
-	remove_collision_exception_with(holder)
-	collision_shape.disabled = false
 	holder.held_weapon = null
 	holder = null
 
