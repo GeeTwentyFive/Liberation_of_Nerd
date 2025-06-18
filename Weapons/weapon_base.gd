@@ -34,10 +34,10 @@ func pick_up(player: Player):
 	(func():collision_shape.disabled = true).call_deferred()
 
 func drop():
-	var drop_position: Vector2 = ( # TODO: FIX
-		holder.global_position +
-		-holder.linear_velocity.normalized() *
-		holder.collision_shape.shape.get_rect().size * 1.5
+	var drop_position: Vector2 = (
+		holder.global_position -
+		holder.linear_velocity.normalized() *
+		holder.collision_shape.shape.get_rect().size
 	)
 	(func():
 		global_position = drop_position

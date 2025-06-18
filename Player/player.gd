@@ -25,8 +25,10 @@ func _on_hurt_collider_body_entered(body: Node2D) -> void:
 func _ready() -> void:
 	set_move_speed(DEFAULT_MOVE_SPEED)
 	var starting_weapon: Weapon = STARTING_WEAPON.instantiate()
-	get_parent().call_deferred("add_child", starting_weapon)
-	starting_weapon.call_deferred("pick_up", self)
+	(func():
+		get_parent().add_child(starting_weapon)
+		starting_weapon.pick_up(self)
+	).call_deferred()
 
 func set_move_speed(new_move_speed: float):
 	move_speed = new_move_speed

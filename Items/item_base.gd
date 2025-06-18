@@ -38,7 +38,7 @@ func drop():
 	var drop_vector: Vector2 = holder.linear_velocity
 	var drop_offset: Vector2 = holder.collision_shape.shape.get_rect().size
 	(func():
-		global_position += ( # TODO: Refactor
+		global_position += (
 			drop_vector.normalized() *
 			drop_offset *
 			DROP_OFFSET_MULTIPLIER
