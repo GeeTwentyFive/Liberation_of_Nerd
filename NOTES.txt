@@ -15,7 +15,6 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
-- SCALE PROJECTILE DAMAGE BASED ON SPEED
 - Implement (from design doc):
 	- Enemies:
 		- Goat (charge)

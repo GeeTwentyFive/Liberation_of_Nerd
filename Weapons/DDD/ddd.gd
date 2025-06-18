@@ -1,7 +1,7 @@
 extends Weapon
 
 
-const BASE_ATTACK_DAMAGE = 10
+const BASE_ATTACK_DAMAGE = 1
 const PROJECTILE = preload("DDDProjectile.tscn")
 
 
@@ -23,7 +23,7 @@ func attack(attack_direction: Vector2):
 		
 		get_parent().add_child(
 			PROJECTILE.instantiate()
-			.set_damage(calculate_attack_damage())
+			.set_velocity_damage_multiplier(calculate_attack_damage()/100)
 			.set_start_pos(global_position)
 			.add_collision_exception(holder)
 			.add_collision_exception(self)

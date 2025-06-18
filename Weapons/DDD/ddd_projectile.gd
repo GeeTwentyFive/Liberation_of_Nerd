@@ -1,14 +1,14 @@
 extends Entity
 
 
-const DEFAULT_BASE_DAMAGE = 10
+const DEFAULT_VELOCITY_DAMAGE_MULTIPLIER = 0.01
 
 
-var damage: int = DEFAULT_BASE_DAMAGE
+var velocity_damage_multiplier: float = DEFAULT_VELOCITY_DAMAGE_MULTIPLIER
 
 
-func set_damage(damage: int):
-	self.damage = damage
+func set_velocity_damage_multiplier(velocity_damage_multiplier: float):
+	self.velocity_damage_multiplier = velocity_damage_multiplier
 	return self
 
 func set_start_pos(start_pos: Vector2):
@@ -41,4 +41,7 @@ func _process(delta: float) -> void:
 
 func _on_enemy_collider_body_entered(body: Node2D) -> void:
 	if body is Enemy:
-		body.hit(damage)
+		body.hit(
+			linear_velocity.length() *
+			velocity_damage_multiplier
+		)

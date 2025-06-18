@@ -33,7 +33,6 @@ size_flags_horizontal = 3
 theme_override_styles/background = SubResource("StyleBoxFlat_6ijjn")
 theme_override_styles/fill = SubResource("StyleBoxFlat_tflo0")
 step = 1.0
-value = 100.0
 rounded = true
 show_percentage = false
 

@@ -16,15 +16,15 @@ func set_shake_strength(shake_strength: float):
 	return self
 
 
-func _on_timeout() -> void:
-	target_camera.offset = previous_offset
-	queue_free()
-
 func _ready() -> void:
 	for node in get_parent().get_children():
 		if node is Camera2D and node.enabled:
 			target_camera = node
 			previous_offset = node.offset
+
+func _on_timeout() -> void:
+	target_camera.offset = previous_offset
+	queue_free()
 
 func _process(delta: float) -> void:
 	if not target_camera:
@@ -34,6 +34,12 @@ func _process(delta: float) -> void:
 	target_camera.offset = (
 		shake_direction *
 		shake_strength *
-		time_left
+		time_left *
+		sin(remap(
+			time_left,
+			wait_time,
+			0,
+			PI*shake_strength,
+			-PI*shake_strength
+		))
 	)
-	shake_direction = -shake_direction

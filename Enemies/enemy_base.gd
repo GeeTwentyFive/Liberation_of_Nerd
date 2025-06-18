@@ -16,7 +16,7 @@ func move():
 func die():
 	queue_free()
 	pass # Optionally override & implement
-		# For like dropping items & stuff
+		# (for like dropping items & stuff)
 
 
 func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
@@ -25,9 +25,16 @@ func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
 func is_on_screen():
 	return $VisibleOnScreenNotifier2D.is_on_screen()
 
-func _ready() -> void:
-	$HealthBar.max_value = health
-	$HealthBar.value = health
+# I have to do it like this because
+# UI elements are asynchronously loaded
+# *after* _ready(), even .call_deferred()
+# is too early...
+var _initialized: bool = false
+func _process(delta: float) -> void:
+	if not _initialized:
+		$HealthBar.max_value = health
+		$HealthBar.value = health
+		_initialized = true
 
 func hit(damage: int):
 	health -= damage

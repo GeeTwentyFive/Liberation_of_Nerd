@@ -5,7 +5,7 @@ extends Entity
 const WEAPON_OFFSET = 16
 
 
-var attack_damage: int = 10
+var attack_damage: float = 10
 
 
 var holder: Player
