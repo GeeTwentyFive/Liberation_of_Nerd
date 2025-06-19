@@ -32,6 +32,10 @@ func shoot(angle: float):
 func _on_body_entered(body: Node2D) -> void:
 	if body is Enemy:
 		body.hit(base_damage * damage_multiplier)
+		body.apply_central_impulse(
+			Vector2.from_angle(rotation) *
+			(base_damage * damage_multiplier)**2
+		)
 
 func _on_life_timer_timeout() -> void:
 	queue_free()
