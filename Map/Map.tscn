@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dwsqcidjasrqm"]
+[gd_scene load_steps=13 format=4 uid="uid://dwsqcidjasrqm"]
 
 [ext_resource type="PackedScene" uid="uid://bax31bel402kg" path="res://Enemies/Chicken/Chicken.tscn" id="1_7s3fs"]
 [ext_resource type="Texture2D" uid="uid://dbr0shufbqkg4" path="res://Map/assets/roguelikeDungeon_transparent.png" id="1_vxmom"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://pod6aluffbm7" path="res://Weapons/BottomlessChickenPouch/BottomlessChickenPouch.tscn" id="7_6od3y"]
 [ext_resource type="PackedScene" uid="uid://bf81snco5lar4" path="res://Items/Electromagnet/Electromagnet.tscn" id="7_ypc4v"]
 [ext_resource type="PackedScene" uid="uid://dghom61fk5fp2" path="res://Weapons/CursedFish/CursedFish.tscn" id="8_6od3y"]
+[ext_resource type="PackedScene" uid="uid://bxe8380ri086f" path="res://Weapons/ShootyThingamabob/ShootyThingamabob.tscn" id="9_nlecm"]
 [ext_resource type="PackedScene" uid="uid://spnll70lgth6" path="res://Weapons/VibratingSharkTooth/VibratingSharkTooth.tscn" id="9_vxmom"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlecm"]
@@ -60,3 +61,6 @@ position = Vector2(69, 69)
 
 [node name="CursedFish" parent="." instance=ExtResource("8_6od3y")]
 position = Vector2(90, 91)
+
+[node name="ShootyThingamabob" parent="." instance=ExtResource("9_nlecm")]
+position = Vector2(101, 120)

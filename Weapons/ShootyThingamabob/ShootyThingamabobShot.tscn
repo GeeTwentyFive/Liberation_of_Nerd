@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://2na1qbc5qk5"]
+
+[ext_resource type="Script" uid="uid://5ssa3jf8mhex" path="res://Weapons/ShootyThingamabob/shooty_thingamabob_shot.gd" id="1_n2cq2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eftq6"]
+size = Vector2(180, 1)
+
+[node name="ShootyThingamabobShot" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_n2cq2")
+
+[node name="Shot" type="CollisionShape2D" parent="."]
+position = Vector2(90, 0)
+shape = SubResource("RectangleShape2D_eftq6")
+
+[node name="Line2D" type="Line2D" parent="Shot"]
+position = Vector2(-90, 0)
+points = PackedVector2Array(0, 0, 180, 0)
+width = 1.0
+default_color = Color(0, 0, 0, 1)

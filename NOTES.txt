@@ -51,4 +51,7 @@ TODO:
 - SFX (Deep sine wave for railgun)
 - Music (General is chiller, boss is more IMPACTFUL)
 
-- AFTER RELEASE: REFACTOR GAME CODE
+- AFTER RELEASE: REFACTOR GAME CODE:
+	- Duplicated sibling code
+	- Replace var's default const with default on var itself
+	- Walrus operator

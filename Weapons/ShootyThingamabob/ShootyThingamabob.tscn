@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxe8380ri086f"]
+
+[ext_resource type="PackedScene" uid="uid://dgyw63baqojrj" path="res://Weapons/WeaponBase.tscn" id="1_dhbx4"]
+[ext_resource type="Script" uid="uid://bpu5iqk6u03eh" path="res://Weapons/ShootyThingamabob/shooty_thingamabob.gd" id="2_yfhxf"]
+[ext_resource type="Texture2D" uid="uid://b71ami3vjma" path="res://Weapons/ShootyThingamabob/assets/shootythingamabob.png" id="3_yog2i"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yog2i"]
+radius = 4.0
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujejo"]
+radius = 4.0
+height = 32.0
+
+[node name="ShootyThingamabob" instance=ExtResource("1_dhbx4")]
+script = ExtResource("2_yfhxf")
+
+[node name="CollisionShape2D" parent="." index="0"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_yog2i")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_yog2i")
+
+[node name="CollisionShape2D" parent="PickupCollider" index="0"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ujejo")
+
+[node name="AttackCooldown" type="Timer" parent="." index="3"]
+one_shot = true
