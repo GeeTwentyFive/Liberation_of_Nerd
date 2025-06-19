@@ -22,8 +22,6 @@ TODO:
 		- Ghost (circle-walk)
 		- Demon (ranged scythe boomerang + fast-circling + if close enough; backing-off)
 		- Cultist (healer + fast-backing-off)
-	- Weapons:
-		- Shooty Thingamabob
 	- Bosses:
 		- Boris
 		- Sharkteeth
@@ -51,7 +49,9 @@ TODO:
 - SFX (Deep sine wave for railgun)
 - Music (General is chiller, boss is more IMPACTFUL)
 
-- AFTER RELEASE: REFACTOR GAME CODE:
-	- Duplicated sibling code
-	- Replace var's default const with default on var itself
-	- Walrus operator
+- AFTER RELEASE:
+	- Try to fix Shooty Thingamabob not hitting freshly-enough activated enemies
+	- REFACTOR GAME CODE:
+		- Duplicated sibling code
+		- Replace var's default const with default on var itself
+		- Walrus operator
