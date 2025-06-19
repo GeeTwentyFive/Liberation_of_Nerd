@@ -2,9 +2,6 @@ class_name Weapon
 extends Entity
 
 
-const WEAPON_OFFSET = 16
-
-
 var attack_damage: float = 10
 
 
@@ -63,7 +60,9 @@ func _physics_process(delta: float) -> void:
 		else:
 			sprite.visible = true
 			global_position = (
-				holder.global_position + attack_direction * WEAPON_OFFSET
+				holder.global_position +
+				attack_direction *
+				holder.collision_shape.shape.get_rect().size
 			)
 			rotation = attack_direction.angle()
 			attack(attack_direction)

@@ -51,3 +51,5 @@ TODO:
 	5) Move player back into reloaded Map scene
 - SFX (Deep sine wave for railgun)
 - Music (General is chiller, boss is more IMPACTFUL)
+
+- AFTER RELEASE: REFACTOR GAME CODE

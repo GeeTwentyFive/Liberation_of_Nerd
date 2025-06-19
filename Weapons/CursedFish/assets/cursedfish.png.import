@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqapey2glrssa"
-path="res://.godot/imported/fish.png-1cc0636dd90bc26921972ce7d73f3199.ctex"
+uid="uid://brpo6417cpkij"
+path="res://.godot/imported/cursedfish.png-43a23f5be1ee8b77467e319d5b1e7c4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Weapons/CursedFish/assets/fish.png"
-dest_files=["res://.godot/imported/fish.png-1cc0636dd90bc26921972ce7d73f3199.ctex"]
+source_file="res://Weapons/CursedFish/assets/cursedfish.png"
+dest_files=["res://.godot/imported/cursedfish.png-43a23f5be1ee8b77467e319d5b1e7c4b.ctex"]
 
 [params]
 
