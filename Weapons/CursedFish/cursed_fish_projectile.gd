@@ -37,6 +37,12 @@ func _physics_process(delta: float) -> void:
 	apply_central_force(
 		holder.global_position - global_position
 	)
+	
+	# If moving toward holder
+	if linear_velocity.normalized().dot(
+		(holder.global_position - global_position).normalized()
+	) > 0:
+		$CollisionShape2D.disabled = true
 
 func _on_collider_body_entered(body: Node2D) -> void:
 	if body is Enemy: body.hit(damage)
@@ -44,6 +50,3 @@ func _on_collider_body_entered(body: Node2D) -> void:
 		if holder.held_weapon is CursedFish:
 			holder.held_weapon.boomerang_returned = true
 		queue_free()
-
-func _on_collision_timer_timeout() -> void:
-	$CollisionShape2D.disabled = true
