@@ -39,9 +39,10 @@ func _process(delta: float) -> void:
 		0.0
 	)
 
+# 1000**2 * 0.001 * 10 = 10000
 func _on_enemy_collider_body_entered(body: Node2D) -> void:
 	if body is Enemy:
 		body.hit(
-			linear_velocity.length() *
-			velocity_damage_multiplier
+			linear_velocity.length()**2 *
+			velocity_damage_multiplier/1000
 		)

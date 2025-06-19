@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dywrdhh0lt3va"]
+
+[ext_resource type="Script" uid="uid://bw4apopotawpw" path="res://_DEV/_VELOCITY_LABEL/_velocity_label.gd" id="1_ign2o"]
+
+[node name="VelocityLabel" type="Label"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+script = ExtResource("1_ign2o")
