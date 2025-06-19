@@ -23,7 +23,6 @@ TODO:
 		- Demon (ranged scythe boomerang + fast-circling + if close enough; backing-off)
 		- Cultist (healer + fast-backing-off)
 	- Weapons:
-		- Bottomless Chicken Pouch
 		- Cursed Fish
 		- Shooty Thingamabob
 	- Bosses:
