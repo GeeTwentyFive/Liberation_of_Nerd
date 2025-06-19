@@ -28,12 +28,14 @@ TODO:
 		- Fish
 		- Gunshot
 		- Nerd
-- Make custom TileSet with:
+	- Add virtual "upgrade(multiplier)" to ItemBase & implement in subclasses
+	- ^ then: Altar (item1 + item2 -> item1 values *= 2)
+- (?)Make custom TileSet with:
 	- Player
 	- Enemies
 	- Weapons
 	- Items
-- Design map in draw.io:
+- (?)Design map in draw.io:
 	- Make starter room ("Move", "Attack", "Use Item", "Drop/Throw Item", "Restart")
 	- Item rooms
 	- Boss rooms
@@ -44,9 +46,10 @@ TODO:
 	1) Move to parent node (GameManager)
 	2) Reload Map scene
 	3) Get transform of player in reloaded Map scene
-	4) Set same transform to moved player
-	5) Move player back into reloaded Map scene
-- SFX (Deep sine wave for railgun)
+	4) Delete player in Map scene
+	5) Set obtained transform to moved player
+	6) Move moved player into reloaded Map scene
+- SFX (AudioStreamGenerator) (deep sine wave for railgun)
 - Music (General is chiller, boss is more IMPACTFUL)
 
 - AFTER RELEASE:
