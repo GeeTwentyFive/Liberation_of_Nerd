@@ -1,7 +1,7 @@
 extends Weapon
 
 
-const DEFAULT_ATTACK_DAMAGE = 20
+const DEFAULT_ATTACK_DAMAGE = 21
 const PROJECTILE = preload("BottomlessChickenPouchProjectile.tscn")
 
 

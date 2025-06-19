@@ -8,6 +8,14 @@ const PROJECTILE = preload("DDDProjectile.tscn")
 func _ready() -> void:
 	attack_damage = BASE_ATTACK_DAMAGE
 
+func pick_up(player: Player):
+	super(player)
+	sprite.modulate.a = 0.5
+
+func drop():
+	sprite.modulate.a = 1.0
+	super()
+
 func attack(attack_direction: Vector2):
 	if $AttackCooldown.is_stopped():
 		var projectile_vector: Vector2 = (

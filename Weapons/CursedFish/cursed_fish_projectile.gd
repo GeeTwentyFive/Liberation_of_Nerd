@@ -1,7 +1,7 @@
 extends Entity
 
 
-const DEFAULT_DAMAGE = 20
+const DEFAULT_DAMAGE = 41
 
 
 var damage: int = DEFAULT_DAMAGE

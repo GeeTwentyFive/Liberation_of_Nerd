@@ -2,7 +2,7 @@ class_name CursedFish
 extends Weapon
 
 
-const DEFAULT_ATTACK_DAMAGE = 40
+const DEFAULT_ATTACK_DAMAGE = 41
 const PROJECTILE = preload("CursedFishProjectile.tscn")
 
 
@@ -14,7 +14,12 @@ func _ready() -> void:
 
 func pick_up(player: Player):
 	super(player)
+	sprite.modulate.a = 0.5
 	boomerang_returned = true
+
+func drop():
+	sprite.modulate.a = 1.0
+	super()
 
 func attack(attack_direction: Vector2):
 	if not boomerang_returned: return
@@ -33,11 +38,7 @@ func attack(attack_direction: Vector2):
 		get_parent().add_child(
 			PROJECTILE.instantiate()
 			.set_damage(calculate_attack_damage())
-			.set_start_pos(
-				global_position +
-				attack_direction *
-				holder.collision_shape.shape.get_rect().size
-			)
+			.set_start_pos(global_position + attack_direction)
 			.add_collision_exception(holder)
 			.add_collision_exception(self)
 			.shoot(holder, projectile_vector)
