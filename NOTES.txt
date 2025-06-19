@@ -39,7 +39,11 @@ TODO:
 	- Items
 - Design map in draw.io:
 	- Make starter room ("Move", "Attack", "Use Item", "Drop/Throw Item", "Restart")
-- Implement Map design (TileMap + enemies, weapons, & items)
+	- Item rooms
+	- Boss rooms
+	- Final boss room
+- Implement Map design (TileMap + enemies, weapons, & items):
+	- MENTION PASSIVE & ACTIVE IN ITEM ROOMS
 - Implement player power persistence (if player chooses loop):
 	1) Move to parent node (GameManager)
 	2) Reload Map scene

@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgyw63baqojrj"]
+[gd_scene load_steps=4 format=3 uid="uid://dgyw63baqojrj"]
 
 [ext_resource type="PackedScene" uid="uid://dy74uem5hkkcd" path="res://EntityBase.tscn" id="1_sjb7h"]
 [ext_resource type="Script" uid="uid://brrub0f6cwakw" path="res://Weapons/weapon_base.gd" id="2_eqe6c"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_26w1v"]
+friction = 0.0
+bounce = 1.0
+
 [node name="WeaponBase" instance=ExtResource("1_sjb7h")]
 collision_layer = 64
 collision_mask = 120
+physics_material_override = SubResource("PhysicsMaterial_26w1v")
 script = ExtResource("2_eqe6c")
 
 [node name="PickupCollider" type="Area2D" parent="." index="2"]
