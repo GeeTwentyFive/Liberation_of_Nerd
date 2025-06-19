@@ -30,4 +30,4 @@ func _on_attack_timer_timeout() -> void:
 	for body in $EnemyCollider.get_overlapping_bodies():
 		if body is Enemy:
 			body.hit(calculate_attack_damage())
-			(func(): body.linear_velocity = Vector2.ZERO).call_deferred()
+			(func(): body.linear_velocity *= -1).call_deferred()

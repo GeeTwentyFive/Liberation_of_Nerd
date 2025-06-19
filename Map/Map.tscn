@@ -36,7 +36,6 @@ position = Vector2(-41, 160)
 freeze_mode = 0
 
 [node name="Chicken2" parent="." instance=ExtResource("1_7s3fs")]
-visible = false
 position = Vector2(-41, 114)
 freeze_mode = 0
 
