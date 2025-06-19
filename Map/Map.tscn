@@ -33,11 +33,9 @@ freeze_mode = 0
 
 [node name="Chicken" parent="." instance=ExtResource("1_7s3fs")]
 position = Vector2(-41, 160)
-freeze_mode = 0
 
 [node name="Chicken2" parent="." instance=ExtResource("1_7s3fs")]
 position = Vector2(-41, 114)
-freeze_mode = 0
 
 [node name="VibratingSharkTooth" parent="." instance=ExtResource("9_vxmom")]
 position = Vector2(124, 78)

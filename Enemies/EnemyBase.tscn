@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcps58mngvkag"]
+[gd_scene load_steps=6 format=3 uid="uid://dcps58mngvkag"]
 
 [ext_resource type="PackedScene" uid="uid://dy74uem5hkkcd" path="res://EntityBase.tscn" id="1_bq4py"]
 [ext_resource type="Script" uid="uid://btrhbunsfsmlx" path="res://Enemies/enemy_base.gd" id="2_6ijjn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6ijjn"]
+friction = 0.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ijjn"]
 bg_color = Color(0, 0, 0, 0.501961)
@@ -13,6 +16,7 @@ bg_color = Color(1, 0, 0, 0.501961)
 process_mode = 4
 collision_layer = 20
 collision_mask = 120
+physics_material_override = SubResource("PhysicsMaterial_6ijjn")
 script = ExtResource("2_6ijjn")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." index="2"]
