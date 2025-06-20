@@ -49,7 +49,9 @@ TODO:
 	4) Delete player in Map scene
 	5) Set obtained transform to moved player
 	6) Move moved player into reloaded Map scene
-- SFX (AudioStreamGenerator) (deep sine wave for railgun)
+- SFX:
+	- AudioStreamGenerator logn interp sine wave module
+	- ^ for railgun: scale sound length & depth based on damage
 - Music (General is chiller, boss is more IMPACTFUL)
 
 - AFTER RELEASE:
