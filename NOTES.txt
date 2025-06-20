@@ -54,6 +54,7 @@ TODO:
 
 - AFTER RELEASE:
 	- REFACTOR GAME CODE:
+		- Place independent modules in "Modules/"
 		- Duplicated sibling code
 		- Replace var's default const with default on var itself
 		- Walrus operator

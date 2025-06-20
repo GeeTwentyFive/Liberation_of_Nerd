@@ -30,6 +30,14 @@ func shoot(angle: float):
 
 
 func _ready() -> void:
+	# Scale size based on damage
+	$Line2D.width = sqrt(base_damage * damage_multiplier)
+	$Line2D.points[1].x = (base_damage * damage_multiplier) * exp(1)
+	var scaled_shape := RectangleShape2D.new()
+	scaled_shape.size = Vector2($Line2D.points[1].x, $Line2D.width)
+	$CollisionShape2D.shape = scaled_shape
+	$CollisionShape2D.position.x = scaled_shape.size.x / 2
+	
 	$LifeTimer.start(log(base_damage * damage_multiplier))
 	
 	await get_tree().physics_frame
@@ -58,7 +66,7 @@ func _on_life_timer_timeout() -> void:
 	queue_free()
 
 func _process(delta: float) -> void:
-	$Sprite2D.modulate.a = remap(
+	$Line2D.modulate.a = remap(
 		$LifeTimer.time_left,
 		$LifeTimer.wait_time,
 		0,
