@@ -29,13 +29,19 @@ func shoot(angle: float):
 	return self
 
 
-func _on_body_entered(body: Node2D) -> void:
-	if body is Enemy:
-		body.hit(base_damage * damage_multiplier)
-		body.apply_central_impulse(
+func _ready() -> void:
+	await get_tree().physics_frame
+	await get_tree().physics_frame
+	for body in get_overlapping_bodies():
+		if body is Enemy:
+			body.apply_central_impulse(
 			Vector2.from_angle(rotation) *
 			base_damage * damage_multiplier
 		)
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is Enemy:
+		body.hit(base_damage * damage_multiplier)
 
 func _on_life_timer_timeout() -> void:
 	queue_free()

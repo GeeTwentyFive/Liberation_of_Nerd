@@ -5,6 +5,7 @@ func set_length(length: int):
 	var new_shape := RectangleShape2D.new()
 	new_shape.size = Vector2(length, 1)
 	$CollisionShape2D.shape = new_shape
+	$CollisionShape2D.position.x = length/2
 	$Line2D.points[1].x = length
 
 func _process(delta: float) -> void:
