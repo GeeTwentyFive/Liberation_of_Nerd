@@ -30,6 +30,8 @@ func shoot(angle: float):
 
 
 func _ready() -> void:
+	$LifeTimer.start(log(base_damage * damage_multiplier))
+	
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	for body in get_overlapping_bodies():
@@ -41,7 +43,16 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Enemy:
-		body.hit(base_damage * damage_multiplier)
+		body.hit(
+			base_damage * damage_multiplier *
+			remap(
+				$LifeTimer.time_left,
+				$LifeTimer.wait_time,
+				0,
+				1,
+				0
+			)
+		)
 
 func _on_life_timer_timeout() -> void:
 	queue_free()
