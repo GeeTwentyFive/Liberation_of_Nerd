@@ -51,6 +51,7 @@ TODO:
 	6) Move moved player into reloaded Map scene
 - SFX:
 	- AudioStreamGenerator logn interp sine wave module
+	- ^ + AudioStreamPlayer2D
 	- ^ for railgun: scale sound length & depth based on damage
 - Music (General is chiller, boss is more IMPACTFUL)
 
