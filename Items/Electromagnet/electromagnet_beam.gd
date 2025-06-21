@@ -1,11 +1,8 @@
 extends Area2D
 
 
-const DEFAULT_DAMAGE_MULTIPLIER = 10.0
-
-
-var damage_multiplier: float = DEFAULT_DAMAGE_MULTIPLIER
-var base_damage: int = 10
+var damage_multiplier := 10.0
+var base_damage := 10
 
 
 func set_damage_multiplier(damage_multiplier: int):

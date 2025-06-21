@@ -1,8 +1,10 @@
 extends Timer
 
 
-var shake_direction: Vector2 = Vector2.RIGHT
-var shake_strength: float = 10.0
+var shake_direction := Vector2.RIGHT
+var shake_strength := 10.0
+
+
 var target_camera: Camera2D
 var previous_offset: Vector2 = Vector2.ZERO
 

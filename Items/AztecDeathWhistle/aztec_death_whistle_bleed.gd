@@ -1,10 +1,7 @@
 extends Timer
 
 
-const DEFAULT_DAMAGE = 1
-
-
-var damage: int = DEFAULT_DAMAGE
+var damage := 1
 
 
 func set_damage(damage: int):

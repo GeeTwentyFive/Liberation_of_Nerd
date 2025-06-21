@@ -6,7 +6,7 @@ const USE_DAMAGE_MULTIPLIER = 10
 const ACTIVATED_ALPHA = 0.5
 
 
-var used: bool = false
+var used := false
 
 
 func apply_passive():
