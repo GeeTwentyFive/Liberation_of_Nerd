@@ -35,8 +35,8 @@ func pick_up(player: Player):
 
 func drop():
 	remove_passive()
-	var drop_vector: Vector2 = holder.linear_velocity
-	var drop_offset: Vector2 = holder.collision_shape.shape.get_rect().size
+	var drop_vector := holder.linear_velocity
+	var drop_offset := holder.collision_shape.shape.get_rect().size
 	(func():
 		global_position += (
 			drop_vector.normalized() *
