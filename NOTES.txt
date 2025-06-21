@@ -14,9 +14,9 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
+- Add using flag to items to prevent dropping while in use
 - Implement (from design doc):
 	- Enemies:
-		- Goat (charge)
 		- Cow (tank)
 		- Ghost (circle-walk)
 		- Demon (ranged scythe boomerang + fast-circling + if close enough; backing-off)
