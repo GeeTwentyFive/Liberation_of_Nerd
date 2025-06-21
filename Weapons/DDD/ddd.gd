@@ -18,7 +18,7 @@ func drop():
 
 func attack(attack_direction: Vector2):
 	if $AttackCooldown.is_stopped():
-		var projectile_vector: Vector2 = (
+		var projectile_vector := (
 			holder.linear_velocity.project(attack_direction) *
 			remap(
 				holder.linear_velocity.normalized().dot(attack_direction),

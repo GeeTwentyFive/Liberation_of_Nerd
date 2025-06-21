@@ -2,7 +2,7 @@ class_name Weapon
 extends Entity
 
 
-var attack_damage: float = 10
+var attack_damage := 10
 
 
 var holder: Player
@@ -31,7 +31,7 @@ func pick_up(player: Player):
 	(func():collision_shape.disabled = true).call_deferred()
 
 func drop():
-	var drop_position: Vector2 = (
+	var drop_position := (
 		holder.global_position -
 		holder.linear_velocity.normalized() *
 		holder.collision_shape.shape.get_rect().size
@@ -48,7 +48,7 @@ func drop():
 func _physics_process(delta: float) -> void:
 	if holder:
 		sprite.flip_h = false
-		var attack_direction: Vector2 = Input.get_vector(
+		var attack_direction := Input.get_vector(
 		"attack_left",
 		"attack_right",
 		"attack_up",

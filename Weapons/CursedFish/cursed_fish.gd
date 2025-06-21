@@ -6,7 +6,7 @@ const DEFAULT_ATTACK_DAMAGE = 41
 const PROJECTILE = preload("CursedFishProjectile.tscn")
 
 
-var boomerang_returned: bool = true
+var boomerang_returned := true
 
 
 func _ready() -> void:
@@ -23,6 +23,7 @@ func drop():
 
 func attack(attack_direction: Vector2):
 	if not boomerang_returned: return
+	
 	if $AttackCooldown.is_stopped():
 		var projectile_vector: Vector2 = (
 			holder.linear_velocity.project(attack_direction) *

@@ -1,10 +1,7 @@
 extends Entity
 
 
-const DEFAULT_VELOCITY_DAMAGE_MULTIPLIER = 0.01
-
-
-var velocity_damage_multiplier: float = DEFAULT_VELOCITY_DAMAGE_MULTIPLIER
+var velocity_damage_multiplier := 0.01
 
 
 func set_velocity_damage_multiplier(velocity_damage_multiplier: float):

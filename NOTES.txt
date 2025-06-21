@@ -55,9 +55,6 @@ TODO:
 	- ^ for railgun: scale sound length & depth based on damage
 - Music (General is chiller, boss is more IMPACTFUL)
 
-- AFTER RELEASE:
-	- REFACTOR GAME CODE:
-		- Place independent modules in "Modules/"
-		- Duplicated sibling code
-		- Replace var's default const with default on var itself
-		- Walrus operator
+- REFACTOR GAME CODE:
+	- Place independent modules in "Modules/"
+	- Duplicated sibling code

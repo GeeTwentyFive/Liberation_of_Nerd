@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dgyw63baqojrj" path="res://Weapons/WeaponBase.tscn" id="1_riaay"]
 [ext_resource type="Texture2D" uid="uid://brpo6417cpkij" path="res://Weapons/CursedFish/assets/cursedfish.png" id="2_6m6ev"]
-[ext_resource type="Script" uid="uid://c3ybrhqpi6e4b" path="res://Weapons/CursedFish/cursed_fish.gd" id="2_jgbvv"]
+[ext_resource type="Script" uid="uid://c3ybrhqpi6e4b" path="res://Weapons/cursed_fish.gd" id="2_jgbvv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jgbvv"]
 radius = 8.0

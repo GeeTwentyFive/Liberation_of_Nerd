@@ -11,7 +11,7 @@ func attack(attack_direction: Vector2):
 	if $AttackTimer.is_stopped():
 		$AttackTimer.start()
 	
-	var vibration_direction: Vector2 = Vector2.from_angle(rotation + PI/2)
+	var vibration_direction := Vector2.from_angle(rotation + PI/2)
 	position = (
 		global_position +
 		vibration_direction *

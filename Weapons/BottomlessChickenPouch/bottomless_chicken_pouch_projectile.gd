@@ -1,10 +1,7 @@
 extends Entity
 
 
-const DEFAULT_DAMAGE = 21
-
-
-var damage: int = DEFAULT_DAMAGE
+var damage := 21
 
 
 func set_damage(damage: int):
