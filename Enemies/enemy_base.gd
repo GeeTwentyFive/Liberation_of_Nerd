@@ -2,12 +2,14 @@ class_name Enemy
 extends Entity
 
 
-var target: Node2D
-var move_speed: float = 100
-var health: int = 40:
+var move_speed := 100.0
+var health := 40:
 	set(x):
 		$HealthBar.value = x
 		health = x
+
+
+var target: Node2D
 
 
 func move():
@@ -29,7 +31,7 @@ func is_on_screen():
 # UI elements are asynchronously loaded
 # *after* _ready(), even .call_deferred()
 # is too early...
-var _initialized: bool = false
+var _initialized := false
 func _process(delta: float) -> void:
 	if not _initialized:
 		$HealthBar.max_value = health
