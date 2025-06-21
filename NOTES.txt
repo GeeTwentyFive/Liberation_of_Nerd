@@ -17,8 +17,6 @@ TODO:
 - Add using flag to items to prevent dropping while in use
 - Implement (from design doc):
 	- Enemies:
-		- Cow (tank)
-		- Ghost (circle-walk)
 		- Demon (ranged scythe boomerang + fast-circling + if close enough; backing-off)
 		- Cultist (healer + fast-backing-off)
 	- Bosses:

@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://dwsqcidjasrqm"]
+[gd_scene load_steps=6 format=4 uid="uid://dwsqcidjasrqm"]
 
-[ext_resource type="PackedScene" uid="uid://bax31bel402kg" path="res://Enemies/Chicken/Chicken.tscn" id="1_7s3fs"]
 [ext_resource type="Texture2D" uid="uid://dbr0shufbqkg4" path="res://Map/assets/roguelikeDungeon_transparent.png" id="1_vxmom"]
 [ext_resource type="PackedScene" uid="uid://cw4sfeund3w7s" path="res://Player/Player.tscn" id="2_2623n"]
-[ext_resource type="PackedScene" uid="uid://daq1mabot7ijw" path="res://Enemies/Cow/Cow.tscn" id="5_qtvud"]
-[ext_resource type="PackedScene" uid="uid://w6ad3pxjnfna" path="res://Enemies/Goat/Goat.tscn" id="13_jq5q4"]
+[ext_resource type="PackedScene" uid="uid://d2f2pdbqtm873" path="res://Enemies/Ghost/Ghost.tscn" id="3_2623n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlecm"]
 texture = ExtResource("1_vxmom")
@@ -30,11 +28,5 @@ occlusion_enabled = false
 position = Vector2(150, 150)
 freeze_mode = 0
 
-[node name="Chicken" parent="." instance=ExtResource("1_7s3fs")]
-position = Vector2(-41, 160)
-
-[node name="Goat" parent="." instance=ExtResource("13_jq5q4")]
-position = Vector2(-40, 137)
-
-[node name="Cow" parent="." instance=ExtResource("5_qtvud")]
-position = Vector2(-40, 113)
+[node name="Ghost" parent="." instance=ExtResource("3_2623n")]
+position = Vector2(-38, 142)
