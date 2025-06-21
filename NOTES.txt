@@ -2,12 +2,11 @@
 EntityBase:
 	Player
 	EnemyBase:
-		Chicken
+		<ENEMIES>
 	ItemBase:
-		AngelsBlessing
-		DemonsCurse
+		<ITEMS>
 	WeaponBase:
-		DDD
+		<WEAPONS>
 
 EntityBase is the base scene for all things that move
 GameManager is for component composition and dependency injection
@@ -29,18 +28,13 @@ TODO:
 		- Gunshot
 		- Nerd
 	- Add virtual "upgrade(multiplier)" to ItemBase & implement in subclasses
-	- ^ then: Altar (item1 + item2 -> item1 values *= 2)
+		- ^ then VIA SIGNAL->GameManager: Altar (item1 + item2 -> item1 values *= 2)
 - (?)Make custom TileSet with:
 	- Player
 	- Enemies
 	- Weapons
 	- Items
-- (?)Design map in draw.io:
-	- Make starter room ("Move", "Attack", "Use Item", "Drop/Throw Item", "Restart")
-	- Item rooms
-	- Boss rooms
-	- Final boss room
-- Implement Map design (TileMap + enemies, weapons, & items):
+- Make Map (TileMap + enemies, weapons, & items):
 	- MENTION PASSIVE & ACTIVE IN ITEM ROOMS
 - Implement player power persistence (if player chooses loop):
 	1) Move to parent node (GameManager)
@@ -55,6 +49,23 @@ TODO:
 	- ^ for railgun: scale sound length & depth based on damage
 - Music (General is chiller, boss is more IMPACTFUL)
 
-- REFACTOR GAME CODE:
-	- Place independent modules in "Modules/"
-	- Duplicated sibling code
+
+FOR V2.0 (after release):
+	- REFACTOR GAME CODE:
+		- Make&place independent modules in "Modules/":
+			- Shake (replace ElectromagnetShake)
+			- Bleed (replace AztecDeathWhistle's bleed)
+			- Flash (replace AztecDeathWhistle's flash)
+			- Shot (replace ElectromagnetBeam & ShootyThingamabobShot)
+			- Projectile (replace DDD, CursedFish, & BottomlessChickenPouch projectile)
+		- Duplicated sibling code
+		- Instead of emitting attacked on holder, emit own signal and connect own emitted signal via GameManager to emit signal on holder - ...maybe also generalize holder...?
+		- Parametrize sprite.modulate.a in DDD, CursedFish, & BottomlessChickenPouch pick_up override
+		- ?ACTIVATED_ALPHA for ItemBase?
+	- Map editor
+	- Multiplayer?
+	- Starting room:
+		- "Solo" pad
+		- "Multi" pad
+		- "Edit" pad
+		- "Exit" pad (ESC in-game goes to starting room)
