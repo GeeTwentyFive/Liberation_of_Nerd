@@ -4,8 +4,10 @@ extends Entity
 
 const DEFAULT_MOVE_SPEED = 200
 const CAMERA_SMOOTHING_MULTIPLIER = 0.1
-const BASE_ATTACK_DAMAGE_MULTIPLIER = 1.0
-const STARTING_WEAPON = preload("res://Weapons/DDD/DDD.tscn")
+@onready var starting_weapon: Weapon = (
+	preload("res://Weapons/DDD/DDD.tscn").instantiate()
+)
+var attack_damage_multiplier := 1.0
 
 
 signal hit
@@ -16,7 +18,6 @@ signal attacked
 var move_speed: float
 var held_item: Item
 var held_weapon: Weapon
-var attack_damage_multiplier: float = BASE_ATTACK_DAMAGE_MULTIPLIER
 
 
 func _on_hurt_collider_body_entered(body: Node2D) -> void:
@@ -24,7 +25,6 @@ func _on_hurt_collider_body_entered(body: Node2D) -> void:
 
 func _ready() -> void:
 	set_move_speed(DEFAULT_MOVE_SPEED)
-	var starting_weapon: Weapon = STARTING_WEAPON.instantiate()
 	(func():
 		get_parent().add_child(starting_weapon)
 		starting_weapon.pick_up(self)
@@ -37,7 +37,7 @@ func set_move_speed(new_move_speed: float):
 	)
 
 func _physics_process(delta: float) -> void:
-	var movement_direction: Vector2 = Input.get_vector(
+	var movement_direction := Input.get_vector(
 		"move_left",
 		"move_right",
 		"move_up",
