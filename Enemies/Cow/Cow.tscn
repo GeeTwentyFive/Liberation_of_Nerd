@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://daq1mabot7ijw"]
+
+[ext_resource type="PackedScene" uid="uid://dcps58mngvkag" path="res://Enemies/EnemyBase.tscn" id="1_vpyb0"]
+[ext_resource type="Script" uid="uid://5sfec58m8kd8" path="res://Enemies/Cow/cow.gd" id="2_x66vt"]
+[ext_resource type="Texture2D" uid="uid://bn81r3j4va0c3" path="res://Enemies/Cow/assets/cow.png" id="3_snmm1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tr31h"]
+radius = 8.0
+
+[node name="Cow" instance=ExtResource("1_vpyb0")]
+script = ExtResource("2_x66vt")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_tr31h")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_snmm1")
