@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dwsqcidjasrqm"]
+[gd_scene load_steps=7 format=4 uid="uid://dwsqcidjasrqm"]
 
 [ext_resource type="Texture2D" uid="uid://dbr0shufbqkg4" path="res://Map/assets/roguelikeDungeon_transparent.png" id="1_vxmom"]
 [ext_resource type="PackedScene" uid="uid://cw4sfeund3w7s" path="res://Player/Player.tscn" id="2_2623n"]
-[ext_resource type="PackedScene" uid="uid://d2f2pdbqtm873" path="res://Enemies/Ghost/Ghost.tscn" id="3_2623n"]
+[ext_resource type="PackedScene" uid="uid://chkwg63k5u453" path="res://Enemies/Demon/Demon.tscn" id="3_2623n"]
+[ext_resource type="PackedScene" uid="uid://d2f2pdbqtm873" path="res://Enemies/Ghost/Ghost.tscn" id="4_wgwpm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlecm"]
 texture = ExtResource("1_vxmom")
@@ -28,5 +29,8 @@ occlusion_enabled = false
 position = Vector2(150, 150)
 freeze_mode = 0
 
-[node name="Ghost" parent="." instance=ExtResource("3_2623n")]
-position = Vector2(-38, 142)
+[node name="Demon" parent="." instance=ExtResource("3_2623n")]
+position = Vector2(-45, 154)
+
+[node name="Ghost" parent="." instance=ExtResource("4_wgwpm")]
+position = Vector2(-45, 123)
