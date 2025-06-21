@@ -17,8 +17,8 @@ TODO:
 - Add using flag to items to prevent dropping while in use
 - Implement (from design doc):
 	- Enemies:
-		- Demon (ranged scythe boomerang + fast-circling + if close enough; backing-off)
-		- Cultist (healer + fast-backing-off)
+		- Demon (ranged scythe boomerang + fast-circling)
+		- Cultist (healer (<- +VFX) + backing-off)
 	- Bosses:
 		- Boris (1000 HP)
 		- Fish (2000 HP)
