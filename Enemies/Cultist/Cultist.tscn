@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdd4vci1aakbe"]
+
+[ext_resource type="PackedScene" uid="uid://dcps58mngvkag" path="res://Enemies/EnemyBase.tscn" id="1_0beo7"]
+[ext_resource type="Script" uid="uid://rt81umx7pxu2" path="res://Enemies/Cultist/cultist.gd" id="2_f5rj1"]
+[ext_resource type="Texture2D" uid="uid://labs2nb517rh" path="res://Enemies/Cultist/assets/cultist.png" id="2_hsaop"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hsaop"]
+radius = 8.0
+
+[node name="Cultist" instance=ExtResource("1_0beo7")]
+script = ExtResource("2_f5rj1")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_hsaop")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_hsaop")

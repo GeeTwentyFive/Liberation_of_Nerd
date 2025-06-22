@@ -10,6 +10,7 @@ var health := 40:
 
 
 var target: Node2D
+var max_health: int
 
 
 func move():
@@ -23,6 +24,7 @@ func die():
 
 func _ready() -> void:
 	assert(target != null)
+	max_health = health
 
 func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
 	process_mode = Node.PROCESS_MODE_INHERIT
