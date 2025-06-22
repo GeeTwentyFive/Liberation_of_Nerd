@@ -6,9 +6,6 @@ const USE_DAMAGE_MULTIPLIER = 10
 const ACTIVATED_ALPHA = 0.5
 
 
-var used := false
-
-
 func apply_passive():
 	holder.attack_damage_multiplier *= PASSIVE_DAMAGE_MULTIPLIER
 
@@ -17,6 +14,7 @@ func remove_passive():
 
 func use():
 	if used: return
+	super()
 	sprite.modulate.a = ACTIVATED_ALPHA
 	sprite.scale *= 2
 	holder.held_item = null
@@ -25,9 +23,8 @@ func use():
 		func():
 			holder.attack_damage_multiplier /= USE_DAMAGE_MULTIPLIER
 			remove_passive()
-			super.use()
+			delete()
 	)
-	used = true
 
 func drop():
 	pass # Not droppable

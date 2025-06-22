@@ -22,6 +22,7 @@ func remove_passive():
 
 func use():
 	if $EnemyFreezeTimer.is_stopped():
+		super()
 		sprite.modulate.a = ACTIVATED_ALPHA
 		sprite.scale *= 2
 		holder.held_item = null
@@ -33,6 +34,6 @@ func use():
 				for enemy in activated_enemies:
 					if enemy: # Check if still exists
 						enemy.move_speed /= USE_ENEMY_SPEED_MULTIPLIER
-				super.use()
+				delete()
 		)
 		$EnemyFreezeTimer.start()

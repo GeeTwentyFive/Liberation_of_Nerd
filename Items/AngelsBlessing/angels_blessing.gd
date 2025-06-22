@@ -29,10 +29,11 @@ func remove_passive():
 
 func use():
 	if $ImmunityTimer.is_stopped():
+		super()
 		sprite.modulate.a = ACTIVATED_ALPHA
 		sprite.scale *= 2
 		holder.held_item = null
-		$ImmunityTimer.connect("timeout", func(): super.use())
+		$ImmunityTimer.connect("timeout", delete)
 		$ImmunityTimer.start(USE_IMMUNE_TIME)
 
 func _on_player_hit(body: Node2D) -> void:

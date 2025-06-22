@@ -22,6 +22,8 @@ func _on_slow_collider_body_exited(body: Node2D) -> void:
 		close_enemies.erase(body)
 
 func use():
+	super()
+	
 	var base_damage: int
 	if holder.held_weapon:
 		base_damage = holder.held_weapon.attack_damage
@@ -48,4 +50,4 @@ func use():
 	
 	for enemy in close_enemies:
 		_on_slow_collider_body_exited(enemy)
-	super()
+	delete()

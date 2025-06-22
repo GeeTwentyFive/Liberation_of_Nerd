@@ -7,6 +7,7 @@ const DROP_OFFSET_MULTIPLIER = 1.4
 
 
 var holder: Player = null
+var used := false
 
 
 func apply_passive():
@@ -16,7 +17,7 @@ func remove_passive():
 	pass # Override & implement
 
 func use():
-	delete()
+	used = true
 	pass # Override & implement
 
 
@@ -34,6 +35,7 @@ func pick_up(player: Player):
 	apply_passive()
 
 func drop():
+	if used: return
 	remove_passive()
 	var drop_vector := holder.linear_velocity
 	var drop_offset := holder.collision_shape.shape.get_rect().size

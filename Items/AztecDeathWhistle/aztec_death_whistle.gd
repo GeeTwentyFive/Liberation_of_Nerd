@@ -14,6 +14,7 @@ func remove_passive():
 	holder.attack_damage_multiplier *= PASSIVE_DAMAGE_MULTIPLIER
 
 func use():
+	super()
 	for node in get_parent().get_children():
 		if (
 			node is Enemy
@@ -23,4 +24,4 @@ func use():
 			node.move_speed *= USE_ENEMY_SPEED_MULTIPLIER
 			node.add_child(BLEED.instantiate())
 	holder.add_child(FLASH.instantiate())
-	super()
+	delete()
