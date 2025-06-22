@@ -45,8 +45,8 @@ TODO:
 
 FOR V2.0 (after release):
 	- REFACTOR GAME CODE:
-		- Make&place independent modules in "Modules/":
-			- LifeTimer (+ for CanvasItem in parent: modulate.a)
+		- Create modules:
+			- LifeTimer (+ for CanvasItem in parent: modulate.a) (replace existing individual LifeTimer's)
 			- Shake (replace ElectromagnetShake)
 			- Bleed (replace AztecDeathWhistle's bleed)
 			- Flash (replace AztecDeathWhistle's flash)
