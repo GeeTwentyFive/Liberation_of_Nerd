@@ -36,7 +36,6 @@ position = Vector2(150, 150)
 freeze_mode = 0
 
 [node name="Demon" parent="." instance=ExtResource("3_2623n")]
-visible = false
 position = Vector2(-45, 154)
 
 [node name="Ghost" parent="." instance=ExtResource("4_wgwpm")]

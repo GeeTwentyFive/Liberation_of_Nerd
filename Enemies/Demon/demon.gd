@@ -8,7 +8,7 @@ const DEFAULT_HEALTH = 400
 func _ready() -> void:
 	move_speed = DEFAULT_MOVE_SPEED
 	health = DEFAULT_HEALTH
-	$Lunger.force_multiplier = 0.5
+	$Lunger.force_multiplier = 0.2
 	super()
 
 func move():
