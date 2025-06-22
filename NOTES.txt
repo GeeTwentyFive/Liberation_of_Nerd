@@ -17,8 +17,8 @@ TODO:
 - Implement (from design doc):
 	- Enemies:
 		- Cultist (HealArea + backing-off)
-			- If not on screen: move toward player
-				- else: move toward nearest active enemy
+			- Move toward nearest active enemy
+				- else: Move away from player
 	- Altar <- add virtual "upgrade(multiplier)" to ItemBase & implement in subclasses
 		- ^ then VIA SIGNAL->GameManager: Altar (item1 + item2 -> item1 values *= 2)
 	- Bosses:

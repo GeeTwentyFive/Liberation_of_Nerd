@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dwsqcidjasrqm"]
+[gd_scene load_steps=13 format=4 uid="uid://dwsqcidjasrqm"]
 
 [ext_resource type="Texture2D" uid="uid://dbr0shufbqkg4" path="res://Map/assets/roguelikeDungeon_transparent.png" id="1_vxmom"]
 [ext_resource type="PackedScene" uid="uid://cw4sfeund3w7s" path="res://Player/Player.tscn" id="2_2623n"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dvo5t0a2mlwb0" path="res://Items/ExpertLure/ExpertLure.tscn" id="6_nyy2o"]
 [ext_resource type="PackedScene" uid="uid://bf81snco5lar4" path="res://Items/Electromagnet/Electromagnet.tscn" id="7_ypc4v"]
 [ext_resource type="PackedScene" uid="uid://cx7sqcxxnh4vb" path="res://Items/AngelsBlessing/AngelsBlessing.tscn" id="9_vxmom"]
+[ext_resource type="PackedScene" uid="uid://bdd4vci1aakbe" path="res://Enemies/Cultist/Cultist.tscn" id="10_nlecm"]
 [ext_resource type="PackedScene" uid="uid://c0qyfsrx8rhk8" path="res://Items/AztecDeathWhistle/AztecDeathWhistle.tscn" id="11_cccvd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlecm"]
@@ -35,6 +36,7 @@ position = Vector2(150, 150)
 freeze_mode = 0
 
 [node name="Demon" parent="." instance=ExtResource("3_2623n")]
+visible = false
 position = Vector2(-45, 154)
 
 [node name="Ghost" parent="." instance=ExtResource("4_wgwpm")]
@@ -54,3 +56,6 @@ position = Vector2(81, 31)
 
 [node name="AngelsBlessing" parent="." instance=ExtResource("9_vxmom")]
 position = Vector2(56, 31)
+
+[node name="Cultist" parent="." instance=ExtResource("10_nlecm")]
+position = Vector2(1, 118)
