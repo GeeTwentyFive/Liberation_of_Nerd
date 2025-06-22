@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4q776llgn1gf"]
+
+[ext_resource type="Script" uid="uid://5egc3oglmcpv" path="res://_MODULES_/Lunger/lunger.gd" id="1_23s7x"]
+
+[node name="Lunger" type="Timer"]
+autostart = true
+script = ExtResource("1_23s7x")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

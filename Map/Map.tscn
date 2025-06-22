@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dwsqcidjasrqm"]
+[gd_scene load_steps=13 format=4 uid="uid://dwsqcidjasrqm"]
 
 [ext_resource type="Texture2D" uid="uid://dbr0shufbqkg4" path="res://Map/assets/roguelikeDungeon_transparent.png" id="1_vxmom"]
 [ext_resource type="PackedScene" uid="uid://cw4sfeund3w7s" path="res://Player/Player.tscn" id="2_2623n"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bf81snco5lar4" path="res://Items/Electromagnet/Electromagnet.tscn" id="7_ypc4v"]
 [ext_resource type="PackedScene" uid="uid://cx7sqcxxnh4vb" path="res://Items/AngelsBlessing/AngelsBlessing.tscn" id="9_vxmom"]
 [ext_resource type="PackedScene" uid="uid://c0qyfsrx8rhk8" path="res://Items/AztecDeathWhistle/AztecDeathWhistle.tscn" id="11_cccvd"]
+[ext_resource type="PackedScene" uid="uid://w6ad3pxjnfna" path="res://Enemies/Goat/Goat.tscn" id="13_jq5q4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlecm"]
 texture = ExtResource("1_vxmom")
@@ -56,3 +57,6 @@ position = Vector2(81, 31)
 
 [node name="AngelsBlessing" parent="." instance=ExtResource("9_vxmom")]
 position = Vector2(56, 31)
+
+[node name="Goat" parent="." instance=ExtResource("13_jq5q4")]
+position = Vector2(-12, 166)

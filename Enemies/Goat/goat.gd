@@ -8,9 +8,7 @@ const DEFAULT_HEALTH = 80
 func _ready() -> void:
 	move_speed = DEFAULT_MOVE_SPEED
 	health = DEFAULT_HEALTH
+	$Lunger.target_lunge_force = move_speed/2
 
 func move():
-	if linear_velocity.length() > 0.1: return
-	apply_central_impulse(
-		(target.position - position).normalized() * move_speed/2
-	)
+	$Lunger.target_position = target.global_position

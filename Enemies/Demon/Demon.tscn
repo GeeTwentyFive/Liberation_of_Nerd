@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://chkwg63k5u453"]
+[gd_scene load_steps=6 format=3 uid="uid://chkwg63k5u453"]
 
 [ext_resource type="PackedScene" uid="uid://dcps58mngvkag" path="res://Enemies/EnemyBase.tscn" id="1_vvp40"]
 [ext_resource type="Texture2D" uid="uid://7vmbqhw1a5hn" path="res://Enemies/Demon/assets/demon.png" id="2_8kx5m"]
 [ext_resource type="Script" uid="uid://8hccq3nmsas3" path="res://Enemies/Demon/demon.gd" id="2_mn6tk"]
+[ext_resource type="PackedScene" uid="uid://c4q776llgn1gf" path="res://_MODULES_/Lunger/Lunger.tscn" id="4_cdtcy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mn6tk"]
 radius = 8.0
@@ -15,3 +16,5 @@ shape = SubResource("CircleShape2D_mn6tk")
 
 [node name="Sprite2D" parent="." index="1"]
 texture = ExtResource("2_8kx5m")
+
+[node name="Lunger" parent="." index="4" instance=ExtResource("4_cdtcy")]

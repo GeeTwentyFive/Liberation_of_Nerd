@@ -21,6 +21,9 @@ func die():
 		# (for like dropping items & stuff)
 
 
+func _ready() -> void:
+	assert(target != null)
+
 func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
 	process_mode = Node.PROCESS_MODE_INHERIT
 
