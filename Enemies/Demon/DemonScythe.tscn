@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://r5p74vnjau02"]
-
-[ext_resource type="PackedScene" uid="uid://dy74uem5hkkcd" path="res://EntityBase.tscn" id="1_7csgg"]
-[ext_resource type="Script" uid="uid://dwix4w2s7sjnl" path="res://Enemies/Demon/demon_scythe.gd" id="2_5v3cb"]
-
-[node name="DemonScythe" instance=ExtResource("1_7csgg")]
-script = ExtResource("2_5v3cb")

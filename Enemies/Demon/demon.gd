@@ -12,6 +12,6 @@ func _ready() -> void:
 
 func move():
 	apply_central_force(
-		(target.position - position).normalized().rotated(-PI/3) *
+		(target.position - position).normalized().rotated(-PI/6) *
 		move_speed
 	)
