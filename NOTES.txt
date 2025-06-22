@@ -52,6 +52,7 @@ FOR V2.0 (after release):
 		- Duplicated sibling code
 		- Collision layers
 		- Instead of emitting attacked on holder, emit own signal and connect own emitted signal via GameManager to emit signal on holder - ...maybe also generalize holder...?
+		- ^ SIGNALIZE
 		- Parametrize sprite.modulate.a in DDD, CursedFish, & BottomlessChickenPouch pick_up override
 		- ?ACTIVATED_ALPHA for ItemBase?
 	- Map editor
