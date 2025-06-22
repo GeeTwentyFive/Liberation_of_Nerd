@@ -14,19 +14,18 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
-- Add using flag to items to prevent dropping while in use
 - Implement (from design doc):
 	- Enemies:
 		- Demon (ranged scythe boomerang + fast-circling)
 		- Cultist (healer (<- +VFX) + backing-off)
+	- Altar <- add virtual "upgrade(multiplier)" to ItemBase & implement in subclasses
+		- ^ then VIA SIGNAL->GameManager: Altar (item1 + item2 -> item1 values *= 2)
 	- Bosses:
 		- Boris (1000 HP)
 		- Fish (2000 HP)
 		- Sharkteeth (5000 HP)
 		- Gunshot (10000 HP)
 		- Nerd (100000 HP)
-	- Add virtual "upgrade(multiplier)" to ItemBase & implement in subclasses
-		- ^ then VIA SIGNAL->GameManager: Altar (item1 + item2 -> item1 values *= 2)
 - Make Map (TileMap + enemies, weapons, & items):
 	- MENTION PASSIVE & ACTIVE IN ITEM ROOMS
 - Implement player power persistence (if player chooses loop):
