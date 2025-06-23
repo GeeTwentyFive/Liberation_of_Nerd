@@ -1,8 +1,10 @@
 extends Item
 
 
-const USE_IMMUNE_TIME = 5.0
 const ACTIVATED_ALPHA = 0.5
+
+
+var use_immune_time := 5.0
 
 
 func apply_passive():
@@ -15,6 +17,7 @@ func apply_passive():
 		"body_entered",
 		_on_player_hit
 	)
+	super()
 
 func remove_passive():
 	var player_hurt_collider: Area2D = holder.get_node("HurtCollider")
@@ -26,6 +29,7 @@ func remove_passive():
 		"body_entered",
 		holder._on_hurt_collider_body_entered
 	)
+	super()
 
 func use():
 	if $ImmunityTimer.is_stopped():
@@ -34,7 +38,12 @@ func use():
 		sprite.scale *= 2
 		holder.held_item = null
 		$ImmunityTimer.connect("timeout", delete)
-		$ImmunityTimer.start(USE_IMMUNE_TIME)
+		$ImmunityTimer.start(use_immune_time)
+
+func upgrade():
+	$ImmunityTimer.wait_time *= UPGRADE_MULTIPLIER
+	use_immune_time *= UPGRADE_MULTIPLIER
+	super()
 
 func _on_player_hit(body: Node2D) -> void:
 	if $ImmunityTimer.is_stopped():

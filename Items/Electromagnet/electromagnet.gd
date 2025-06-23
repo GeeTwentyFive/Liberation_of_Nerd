@@ -5,6 +5,7 @@ const ENEMY_SLOW_MULTIPLIER = 0.01
 const BEAM = preload("ElectromagnetBeam.tscn")
 const DEFAULT_BEAM_BASE_DAMAGE = 10.0
 const SHAKE = preload("ElectromagnetShake.tscn")
+var damage_multiplier := 10.0
 
 
 var close_enemies: Array[Enemy] = []
@@ -31,6 +32,7 @@ func use():
 	
 	get_parent().add_child(
 		BEAM.instantiate()
+		.set_damage_multiplier(damage_multiplier)
 		.prod_damage_multiplier(holder.attack_damage_multiplier)
 		.set_base_damage(base_damage)
 		.set_start_pos(global_position)
@@ -51,3 +53,7 @@ func use():
 	for enemy in close_enemies:
 		_on_slow_collider_body_exited(enemy)
 	delete()
+
+func upgrade():
+	damage_multiplier *= UPGRADE_MULTIPLIER
+	super()

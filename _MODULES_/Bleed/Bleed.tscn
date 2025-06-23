@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://1xp7ktrya3a4"]
+
+[ext_resource type="Script" uid="uid://mnrlblywv2js" path="res://_MODULES_/Bleed/bleed.gd" id="1_pr4sy"]
+
+[node name="Bleed" type="Timer"]
+wait_time = 0.1
+autostart = true
+script = ExtResource("1_pr4sy")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

@@ -14,9 +14,8 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
+- FIX ALTAR
 - Implement (from design doc):
-	- Altar <- add virtual "upgrade(multiplier)" to ItemBase & implement in subclasses
-		- ^ then VIA SIGNAL->GameManager: Altar (item1 + item2 -> item1 values *= 2)
 	- Bosses:
 		- Boris (1000 HP)
 			- Inherited scene from Chicken
@@ -45,8 +44,6 @@ FOR V2.0 (after release):
 		- Create modules:
 			- LifeTimer (+ for CanvasItem in parent: modulate.a) (replace existing individual LifeTimer's)
 			- Shake (replace ElectromagnetShake)
-			- Bleed (replace AztecDeathWhistle's bleed)
-			- Flash (replace AztecDeathWhistle's flash)
 			- Shot (replace ElectromagnetBeam & ShootyThingamabobShot)
 			- Projectile (replace DDD, CursedFish, & BottomlessChickenPouch projectile)
 		- Duplicated sibling code

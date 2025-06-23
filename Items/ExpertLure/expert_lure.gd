@@ -37,3 +37,7 @@ func use():
 				delete()
 		)
 		$EnemyFreezeTimer.start()
+
+func upgrade():
+	$EnemyFreezeTimer.wait_time *= UPGRADE_MULTIPLIER
+	super()

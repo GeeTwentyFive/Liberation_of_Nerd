@@ -4,6 +4,7 @@ extends Entity
 
 const PICKED_UP_ALPHA = 0.2
 const DROP_OFFSET_MULTIPLIER = 1.4
+const UPGRADE_MULTIPLIER = 2.0
 
 
 var holder: Player = null
@@ -18,6 +19,9 @@ func remove_passive():
 
 func use():
 	used = true
+	pass # Override & implement
+
+func upgrade():
 	pass # Override & implement
 
 
