@@ -14,7 +14,7 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
-- FIX ALTAR
+- FIX ALTAR (& railgun?)
 - Implement (from design doc):
 	- Bosses:
 		- Boris (1000 HP)

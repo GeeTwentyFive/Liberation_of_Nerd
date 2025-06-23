@@ -9,6 +9,7 @@ extends Node2D
 
 const IMG_PAD_ACTIVE = preload("assets/pad_active.png")
 const IMG_PAD_INACTIVE = preload("assets/pad_inactive.png")
+const FLASH = preload("res://_MODULES_/Flash/Flash.tscn")
 
 
 func _on_pad_1_body_entered(body: Node2D) -> void:
@@ -37,6 +38,6 @@ func _on_pad_body_entered(body: Node2D) -> void:
 	if pad2_bodies.size() != 1: return
 	if not pad1_bodies[0].has_method(upgrade_method): return
 	pad1_bodies[0].call_deferred(upgrade_method)
+	pad1_bodies[0].add_child(FLASH.instantiate())
 	pad2_bodies[0].queue_free()
-	# TODO: Add flasher
 	queue_free()
