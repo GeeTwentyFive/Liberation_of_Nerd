@@ -6,9 +6,10 @@ const DEFAULT_HEALTH = 400
 
 
 func _ready() -> void:
+	super()
 	move_speed = DEFAULT_MOVE_SPEED
 	health = DEFAULT_HEALTH
-	super()
+	max_health = health
 
 func move():
 	apply_central_force(

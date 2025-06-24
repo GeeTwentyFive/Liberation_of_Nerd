@@ -10,9 +10,10 @@ var heal_target: Enemy = null
 
 
 func _ready() -> void:
+	super()
 	move_speed = DEFAULT_MOVE_SPEED
 	health = DEFAULT_HEALTH
-	super()
+	max_health = health
 
 func move():
 	if not heal_target:

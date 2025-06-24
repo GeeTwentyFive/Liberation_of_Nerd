@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://ijuqdw1365lr"]
+
+[ext_resource type="PackedScene" uid="uid://dcps58mngvkag" path="res://Enemies/EnemyBase.tscn" id="1_4hlxu"]
+[ext_resource type="Script" uid="uid://cj8g8p4p8g4fd" path="res://Enemies/_BOSSES_/Fish/fish.gd" id="2_pj1t5"]
+[ext_resource type="Texture2D" uid="uid://b8wqb1ymkwbw7" path="res://Enemies/_BOSSES_/Fish/assets/fish.png" id="3_mcfmr"]
+[ext_resource type="PackedScene" uid="uid://c4q776llgn1gf" path="res://_MODULES_/Lunger/Lunger.tscn" id="4_fdv3y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pj1t5"]
+radius = 8.0
+
+[node name="Fish" instance=ExtResource("1_4hlxu")]
+collision_mask = 88
+script = ExtResource("2_pj1t5")
+
+[node name="CollisionShape2D" parent="." index="0"]
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_pj1t5")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(4, 4)
+texture = ExtResource("3_mcfmr")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+scale = Vector2(4, 4)
+
+[node name="HealthBar" parent="." index="3"]
+offset_left = -32.0
+offset_top = -40.0
+offset_right = -16.0
+offset_bottom = -36.0
+scale = Vector2(4, 2)
+
+[node name="Lunger" parent="." index="4" instance=ExtResource("4_fdv3y")]
+
+[connection signal="timeout" from="Lunger" to="." method="_on_lunger_timeout"]
