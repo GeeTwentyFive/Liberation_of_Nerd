@@ -42,7 +42,6 @@ FOR V2.0 (after release):
 	- REFACTOR GAME CODE:
 		- Create modules:
 			- LifeTimer (+ for CanvasItem in parent: modulate.a) (replace existing individual LifeTimer's)
-			- Shake (replace ElectromagnetShake)
 			- Shot (replace ElectromagnetBeam & ShootyThingamabobShot)
 			- Projectile (replace DDD, CursedFish, & BottomlessChickenPouch projectile)
 		- Duplicated sibling code

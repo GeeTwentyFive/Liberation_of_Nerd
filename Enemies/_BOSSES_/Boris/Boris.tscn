@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwlxc377hwwdu"]
+
+[ext_resource type="PackedScene" uid="uid://bax31bel402kg" path="res://Enemies/Chicken/Chicken.tscn" id="1_adwg0"]
+[ext_resource type="Script" uid="uid://c16df0qr2fuxk" path="res://Enemies/_BOSSES_/Boris/boris.gd" id="2_4ptdv"]
+
+[node name="Boris" instance=ExtResource("1_adwg0")]
+script = ExtResource("2_4ptdv")
+
+[node name="CollisionShape2D" parent="." index="0"]
+scale = Vector2(4, 4)
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(4, 4)
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+scale = Vector2(4, 4)
+
+[node name="HealthBar" parent="." index="3"]
+offset_left = -32.0
+offset_top = -40.0
+offset_right = -16.0
+offset_bottom = -36.0
+scale = Vector2(4, 2)

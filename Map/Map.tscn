@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://dwsqcidjasrqm"]
+[gd_scene load_steps=12 format=4 uid="uid://dwsqcidjasrqm"]
 
 [ext_resource type="Texture2D" uid="uid://dbr0shufbqkg4" path="res://Map/assets/roguelikeDungeon_transparent.png" id="1_vxmom"]
 [ext_resource type="PackedScene" uid="uid://cw4sfeund3w7s" path="res://Player/Player.tscn" id="2_2623n"]
 [ext_resource type="PackedScene" uid="uid://bb8ey6wgx2ha2" path="res://Items/DemonsCurse/DemonsCurse.tscn" id="5_qtvud"]
 [ext_resource type="PackedScene" uid="uid://dvo5t0a2mlwb0" path="res://Items/ExpertLure/ExpertLure.tscn" id="6_nyy2o"]
 [ext_resource type="PackedScene" uid="uid://bf81snco5lar4" path="res://Items/Electromagnet/Electromagnet.tscn" id="7_ypc4v"]
+[ext_resource type="PackedScene" uid="uid://cwlxc377hwwdu" path="res://Enemies/_BOSSES_/Boris/Boris.tscn" id="9_nlecm"]
 [ext_resource type="PackedScene" uid="uid://cx7sqcxxnh4vb" path="res://Items/AngelsBlessing/AngelsBlessing.tscn" id="9_vxmom"]
 [ext_resource type="PackedScene" uid="uid://c0qyfsrx8rhk8" path="res://Items/AztecDeathWhistle/AztecDeathWhistle.tscn" id="11_cccvd"]
 [ext_resource type="PackedScene" uid="uid://br3v1wribe6qv" path="res://_MODULES_/UpgradeAltar/UpgradeAltar.tscn" id="11_vk5l4"]
@@ -30,6 +31,8 @@ tile_set = SubResource("TileSet_vk5l4")
 occlusion_enabled = false
 
 [node name="UpgradeAltar" parent="." instance=ExtResource("11_vk5l4")]
+process_mode = 4
+visible = false
 position = Vector2(93, 92)
 
 [node name="Pad1" parent="UpgradeAltar" index="0"]
@@ -56,5 +59,8 @@ position = Vector2(81, 31)
 
 [node name="AngelsBlessing" parent="." instance=ExtResource("9_vxmom")]
 position = Vector2(56, 31)
+
+[node name="Boris" parent="." instance=ExtResource("9_nlecm")]
+position = Vector2(-26, 139)
 
 [editable path="UpgradeAltar"]
