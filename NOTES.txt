@@ -16,9 +16,8 @@ NO PROJECTILE SPEED - just inherit player's linear velocity
 TODO:
 - Implement (from design doc):
 	- Bosses:
-		- Fish (2000 HP)
-			- Boris but with Lunger(<- +spin)
 		- Sharkteeth (5000 HP)
+			- circle 1s -> impulse
 		- Gunshot (10000 HP)
 		- Nerd (100000 HP)
 - Make Map (TileMap + enemies, weapons, & items):
