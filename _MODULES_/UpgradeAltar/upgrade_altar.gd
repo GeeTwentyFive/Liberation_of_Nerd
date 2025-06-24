@@ -28,8 +28,8 @@ func _on_pad_2_body_entered(body: Node2D) -> void:
 	$Pad2/Sprite2D.texture = IMG_PAD_ACTIVE
 
 func _on_pad_2_body_exited(body: Node2D) -> void:
-	if $Pad2.get_overlapping_bodies().is_empty(): return
-	$Pad2/Sprite2D.texture = IMG_PAD_INACTIVE
+	if $Pad2.get_overlapping_bodies().is_empty():
+		$Pad2/Sprite2D.texture = IMG_PAD_INACTIVE
 
 func _on_pad_body_entered(body: Node2D) -> void:
 	var pad1_bodies = $Pad1.get_overlapping_bodies()

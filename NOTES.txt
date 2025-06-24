@@ -14,7 +14,6 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
-- FIX ALTAR (& railgun?)
 - Implement (from design doc):
 	- Bosses:
 		- Boris (1000 HP)
@@ -51,6 +50,7 @@ FOR V2.0 (after release):
 		- Instead of emitting attacked on holder, emit own signal and connect own emitted signal via GameManager to emit signal on holder - ...maybe also generalize holder...?
 		- ^ SIGNALIZE
 		- Parametrize sprite.modulate.a in DDD, CursedFish, & BottomlessChickenPouch pick_up override
+		- Make use() effects their own scenes (independent & modular)
 		- ?ACTIVATED_ALPHA for ItemBase?
 	- Map editor
 	- Multiplayer?
