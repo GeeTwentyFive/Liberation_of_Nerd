@@ -16,8 +16,7 @@ NO PROJECTILE SPEED - just inherit player's linear velocity
 TODO:
 - Implement (from design doc):
 	- Boss: Gunshot (10000 HP)
-		- always rotated toward target
-		- circle 1s -> laser cast 0.5s -> shoot
+		- circle -> (without stopping) laser cast 0.5s -> shoot
 - Make Map (TileMap + enemies, weapons, & items):
 	- MENTION PASSIVE & ACTIVE IN ITEM ROOMS
 - Implement player power persistence (if player chooses loop):

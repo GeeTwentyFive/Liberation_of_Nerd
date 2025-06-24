@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu7wqwb7et1b2"]
+
+[ext_resource type="Script" uid="uid://c8o01pvyxuyaf" path="res://Enemies/_BOSSES_/Gunshot/GunshotShot/gunshot_shot.gd" id="1_7ixo2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvwwd"]
+size = Vector2(180, 1)
+
+[node name="GunshotShot" type="Area2D"]
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+script = ExtResource("1_7ixo2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dvwwd")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 180, 0)
+width = 1.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="LifeTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+autostart = true
