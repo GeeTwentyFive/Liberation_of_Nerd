@@ -10,6 +10,7 @@ const DEFAULT_HEALTH = 5000
 func _ready() -> void:
 	var children = get_children()
 	for child in children:
+		if child is VisibleOnScreenNotifier2D: continue
 		assert(child is Enemy)
 		child.health = DEFAULT_HEALTH/children.size()
 		child.max_health = child.health

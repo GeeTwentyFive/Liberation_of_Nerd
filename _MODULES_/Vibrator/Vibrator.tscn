@@ -3,5 +3,6 @@
 [ext_resource type="Script" uid="uid://de1x7qpkk8tg3" path="res://_MODULES_/Vibrator/vibrator.gd" id="1_sa56n"]
 
 [node name="Vibrator" type="Timer"]
+wait_time = 0.1
 autostart = true
 script = ExtResource("1_sa56n")

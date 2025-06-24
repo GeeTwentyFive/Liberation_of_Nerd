@@ -14,10 +14,10 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
+- FIX SHARKTEETH <- Make into Enemy adapter for GameManager?
 - Implement (from design doc):
 	- Bosses:
 		- Sharkteeth (5000 HP)
-			- circle 1s -> impulse
 		- Gunshot (10000 HP)
 		- Nerd (100000 HP)
 - Make Map (TileMap + enemies, weapons, & items):
