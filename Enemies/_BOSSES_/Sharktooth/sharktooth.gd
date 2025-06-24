@@ -1,7 +1,10 @@
+class_name Sharktooth
 extends Enemy
 
 
+const DEFAULT_HEALTH = 1000
 const DEFAULT_LUNGE_FORCE = 50
+@export var drop := preload("res://Weapons/VibratingSharkTooth/VibratingSharkTooth.tscn")
 
 
 var lunge_force: int:
@@ -12,6 +15,8 @@ var lunge_force: int:
 
 func _ready() -> void:
 	super()
+	health = DEFAULT_HEALTH
+	max_health = health
 	lunge_force = DEFAULT_LUNGE_FORCE
 
 # Override sprite flipping behavior of Entity
@@ -21,3 +26,10 @@ func _physics_process(delta: float) -> void:
 	).angle()
 	
 	$Lunger.target_position = target.global_position
+
+func die():
+	var _drop = drop.instantiate()
+	_drop.global_position = global_position
+	get_parent().add_child(_drop)
+	
+	super()

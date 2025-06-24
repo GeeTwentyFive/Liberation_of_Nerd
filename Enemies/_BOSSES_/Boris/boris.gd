@@ -1,7 +1,7 @@
 extends Chicken
 
 
-const DROP = preload("res://Weapons/BottomlessChickenPouch/BottomlessChickenPouch.tscn")
+@export var drop = preload("res://Weapons/BottomlessChickenPouch/BottomlessChickenPouch.tscn")
 
 
 func _ready() -> void:
@@ -13,8 +13,8 @@ func _ready() -> void:
 	max_health = health
 
 func die():
-	var drop = DROP.instantiate()
-	drop.global_position = global_position
-	get_parent().add_child(drop)
+	var _drop = drop.instantiate()
+	_drop.global_position = global_position
+	get_parent().add_child(_drop)
 	
 	super()
