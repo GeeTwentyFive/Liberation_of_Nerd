@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dqj4lljqukau0"]
 
 [ext_resource type="PackedScene" uid="uid://dy74uem5hkkcd" path="res://EntityBase.tscn" id="1_c0fur"]
-[ext_resource type="Texture2D" uid="uid://btb81iff1nocb" path="res://Weapons/BottomlessChickenPouch/assets/bottomlesschickenpouch_projectile.png" id="2_ca001"]
-[ext_resource type="Script" uid="uid://80j5sm5l4ubp" path="res://Weapons/BottomlessChickenPouch/bottomless_chicken_pouch_projectile.gd" id="2_r38jh"]
+[ext_resource type="Texture2D" uid="uid://btb81iff1nocb" path="res://Weapons/BottomlessChickenPouch/BottomlessChickenPouchProjectile/assets/bottomlesschickenpouch_projectile.png" id="2_ca001"]
+[ext_resource type="Script" uid="uid://80j5sm5l4ubp" path="res://Weapons/BottomlessChickenPouch/BottomlessChickenPouchProjectile/bottomless_chicken_pouch_projectile.gd" id="2_r38jh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r38jh"]
 radius = 8.0

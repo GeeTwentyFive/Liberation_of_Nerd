@@ -2,7 +2,7 @@ extends Weapon
 
 
 const BASE_ATTACK_DAMAGE = 1
-const PROJECTILE = preload("DDDProjectile.tscn")
+const PROJECTILE = preload("DDDProjectile/DDDProjectile.tscn")
 
 
 func _ready() -> void:

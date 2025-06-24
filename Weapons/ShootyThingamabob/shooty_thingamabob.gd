@@ -2,7 +2,7 @@ extends Weapon
 
 
 const BASE_ATTACK_DAMAGE = 1111
-const SHOT = preload("ShootyThingamabobShot.tscn")
+const SHOT = preload("ShootyThingamabobShot/ShootyThingamabobShot.tscn")
 const SHOT_SPREAD = PI/2
 const SHOT_COUNT = 11
 const MAX_SHOT_LENGTH = 180

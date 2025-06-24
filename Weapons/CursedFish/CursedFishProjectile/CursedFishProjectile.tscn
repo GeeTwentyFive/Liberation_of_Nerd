@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://blge2jk5rnbh0"]
 
 [ext_resource type="PackedScene" uid="uid://dy74uem5hkkcd" path="res://EntityBase.tscn" id="1_k35rr"]
-[ext_resource type="Script" uid="uid://bsbest7f3ys4r" path="res://Weapons/CursedFish/cursed_fish_projectile.gd" id="2_jtq0m"]
-[ext_resource type="Texture2D" uid="uid://brpo6417cpkij" path="res://Weapons/CursedFish/assets/cursedfish.png" id="3_y457c"]
+[ext_resource type="Script" uid="uid://bsbest7f3ys4r" path="res://Weapons/CursedFish/CursedFishProjectile/cursed_fish_projectile.gd" id="2_jtq0m"]
+[ext_resource type="Texture2D" uid="uid://1c1on623r1iw" path="res://Weapons/CursedFish/CursedFishProjectile/assets/cursedfish.png" id="3_dtuet"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y457c"]
 radius = 8.0
@@ -19,7 +19,7 @@ script = ExtResource("2_jtq0m")
 shape = SubResource("CircleShape2D_y457c")
 
 [node name="Sprite2D" parent="." index="1"]
-texture = ExtResource("3_y457c")
+texture = ExtResource("3_dtuet")
 
 [node name="Collider" type="Area2D" parent="." index="2"]
 collision_layer = 0

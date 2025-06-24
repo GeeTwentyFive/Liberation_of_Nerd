@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btb81iff1nocb"
-path="res://.godot/imported/bottomlesschickenpouch_projectile.png-4452362a037a97058c35ab8ef56f972d.ctex"
+path="res://.godot/imported/bottomlesschickenpouch_projectile.png-ab8c91c33447be4acefe651a94a2b82d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Weapons/BottomlessChickenPouch/assets/bottomlesschickenpouch_projectile.png"
-dest_files=["res://.godot/imported/bottomlesschickenpouch_projectile.png-4452362a037a97058c35ab8ef56f972d.ctex"]
+source_file="res://Weapons/BottomlessChickenPouch/BottomlessChickenPouchProjectile/assets/bottomlesschickenpouch_projectile.png"
+dest_files=["res://.godot/imported/bottomlesschickenpouch_projectile.png-ab8c91c33447be4acefe651a94a2b82d.ctex"]
 
 [params]
 

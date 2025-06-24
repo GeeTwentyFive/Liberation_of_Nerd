@@ -3,7 +3,7 @@ extends Weapon
 
 
 const DEFAULT_ATTACK_DAMAGE = 41
-const PROJECTILE = preload("CursedFishProjectile.tscn")
+const PROJECTILE = preload("CursedFishProjectile/CursedFishProjectile.tscn")
 
 
 var boomerang_returned := true

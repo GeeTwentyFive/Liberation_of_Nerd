@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://ckp5wws6byby3"]
 
 [ext_resource type="PackedScene" uid="uid://dy74uem5hkkcd" path="res://EntityBase.tscn" id="1_e5h7s"]
-[ext_resource type="Texture2D" uid="uid://c23t2d3s3110h" path="res://Weapons/DDD/assets/fist.png" id="2_a0gf1"]
-[ext_resource type="Script" uid="uid://bic7v2e3y2syd" path="res://Weapons/DDD/ddd_projectile.gd" id="2_b36sw"]
+[ext_resource type="Script" uid="uid://bic7v2e3y2syd" path="res://Weapons/DDD/DDDProjectile/ddd_projectile.gd" id="2_b36sw"]
+[ext_resource type="Texture2D" uid="uid://d1v25avqjm4xj" path="res://Weapons/DDD/DDDProjectile/assets/fist.png" id="3_lxjhh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b36sw"]
 friction = 0.0
@@ -23,7 +23,7 @@ script = ExtResource("2_b36sw")
 shape = SubResource("CircleShape2D_p06n5")
 
 [node name="Sprite2D" parent="." index="1"]
-texture = ExtResource("2_a0gf1")
+texture = ExtResource("3_lxjhh")
 
 [node name="EnemyCollider" type="Area2D" parent="." index="2"]
 collision_layer = 0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ghc5xt2oj0t7"]
 
-[ext_resource type="Script" uid="uid://bnchtrw1st2kp" path="res://Items/Electromagnet/electromagnet_beam.gd" id="1_ysjvx"]
+[ext_resource type="Script" uid="uid://bnchtrw1st2kp" path="res://Items/Electromagnet/ElectromagnetBeam/electromagnet_beam.gd" id="1_ysjvx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n6isp"]
 size = Vector2(100, 10)

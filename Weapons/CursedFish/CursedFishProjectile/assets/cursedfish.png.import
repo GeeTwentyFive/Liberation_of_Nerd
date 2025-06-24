@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ets5n5he78fh"
-path="res://.godot/imported/sharktooth.png-4b120ce4870e70028ee7df41b576e2b6.ctex"
+uid="uid://1c1on623r1iw"
+path="res://.godot/imported/cursedfish.png-f34a4f074f4447ded8a23edc68e515ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/_BOSSES_/Sharkteeth/assets/sharktooth.png"
-dest_files=["res://.godot/imported/sharktooth.png-4b120ce4870e70028ee7df41b576e2b6.ctex"]
+source_file="res://Weapons/CursedFish/CursedFishProjectile/assets/cursedfish.png"
+dest_files=["res://.godot/imported/cursedfish.png-f34a4f074f4447ded8a23edc68e515ab.ctex"]
 
 [params]
 

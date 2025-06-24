@@ -2,7 +2,7 @@ extends Weapon
 
 
 const DEFAULT_ATTACK_DAMAGE = 21
-const PROJECTILE = preload("BottomlessChickenPouchProjectile.tscn")
+const PROJECTILE = preload("BottomlessChickenPouchProjectile/BottomlessChickenPouchProjectile.tscn")
 
 
 func _ready() -> void:
