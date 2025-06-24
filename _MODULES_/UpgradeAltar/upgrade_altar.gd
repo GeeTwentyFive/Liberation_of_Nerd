@@ -4,6 +4,8 @@ extends Node2D
 #	Call ".queue_free()" on Pad2 body
 #	Call "<upgrade_method>()" on Pad1 body
 
+@export_flags_2d_physics var pad1_target_mask := 64
+@export_flags_2d_physics var pad2_target_mask := 64
 @export var upgrade_method := "upgrade"
 
 
@@ -11,6 +13,10 @@ const IMG_PAD_ACTIVE = preload("assets/pad_active.png")
 const IMG_PAD_INACTIVE = preload("assets/pad_inactive.png")
 const FLASH = preload("res://_MODULES_/Flash/Flash.tscn")
 
+
+func _ready() -> void:
+	$Pad1.collision_mask = pad1_target_mask
+	$Pad2.collision_mask = pad2_target_mask
 
 func _on_pad_1_body_entered(body: Node2D) -> void:
 	if not body.has_method(upgrade_method): return
