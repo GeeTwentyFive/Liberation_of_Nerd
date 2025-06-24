@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b057jp5o32qn0"]
+
+[ext_resource type="Script" uid="uid://e7a03xaybcxh" path="res://Enemies/_BOSSES_/Sharkteeth/sharkteeth.gd" id="1_6a5rs"]
+[ext_resource type="PackedScene" uid="uid://chnn1a4ih45ml" path="res://Enemies/_BOSSES_/Sharkteeth/Sharktooth/Sharktooth.tscn" id="2_painv"]
+
+[node name="Sharkteeth" type="Node2D"]
+script = ExtResource("1_6a5rs")
+
+[node name="Sharktooth" parent="." instance=ExtResource("2_painv")]
+
+[node name="Sharktooth2" parent="." instance=ExtResource("2_painv")]
+position = Vector2(-32, 0)
+
+[node name="Sharktooth3" parent="." instance=ExtResource("2_painv")]
+position = Vector2(32, 0)
+
+[node name="Sharktooth4" parent="." instance=ExtResource("2_painv")]
+position = Vector2(0, -32)
+
+[node name="Sharktooth5" parent="." instance=ExtResource("2_painv")]
+position = Vector2(0, 32)

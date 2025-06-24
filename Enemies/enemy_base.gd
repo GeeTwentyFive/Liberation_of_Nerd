@@ -3,14 +3,17 @@ extends Entity
 
 
 var move_speed := 100.0
-var health := 40:
+var max_health := 40:
+	set(x):
+		$HealthBar.max_value = x
+		max_health = x
+var health := max_health:
 	set(x):
 		$HealthBar.value = x
 		health = x
 
 
 var target: Node2D
-var max_health: int
 
 
 func move():

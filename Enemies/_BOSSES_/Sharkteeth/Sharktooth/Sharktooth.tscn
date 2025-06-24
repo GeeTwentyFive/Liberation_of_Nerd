@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://chnn1a4ih45ml"]
+
+[ext_resource type="PackedScene" uid="uid://dcps58mngvkag" path="res://Enemies/EnemyBase.tscn" id="1_7ulfv"]
+[ext_resource type="Script" uid="uid://o6liokr14bfi" path="res://Enemies/_BOSSES_/Sharkteeth/Sharktooth/sharktooth.gd" id="2_p2aab"]
+[ext_resource type="Texture2D" uid="uid://ets5n5he78fh" path="res://Enemies/_BOSSES_/Sharkteeth/Sharktooth/assets/sharktooth.png" id="3_lqv4r"]
+[ext_resource type="PackedScene" uid="uid://tok0xxq3sarx" path="res://_MODULES_/Vibrator/Vibrator.tscn" id="3_uberv"]
+[ext_resource type="PackedScene" uid="uid://c4q776llgn1gf" path="res://_MODULES_/Lunger/Lunger.tscn" id="5_qryhc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lqv4r"]
+radius = 8.0
+
+[node name="Sharktooth" instance=ExtResource("1_7ulfv")]
+script = ExtResource("2_p2aab")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_lqv4r")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_lqv4r")
+
+[node name="HealthBar" parent="." index="3"]
+offset_top = -10.0
+offset_bottom = -6.0
+
+[node name="Vibrator" parent="." index="4" instance=ExtResource("3_uberv")]
+
+[node name="Lunger" parent="." index="5" instance=ExtResource("5_qryhc")]
