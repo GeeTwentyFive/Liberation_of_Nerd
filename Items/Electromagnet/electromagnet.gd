@@ -4,7 +4,7 @@ extends Item
 const ENEMY_SLOW_MULTIPLIER = 0.01
 const BEAM = preload("ElectromagnetBeam.tscn")
 const DEFAULT_BEAM_BASE_DAMAGE = 10.0
-const SHAKE = preload("ElectromagnetShake.tscn")
+const SHAKE = preload("res://_MODULES_/CameraShaker/CameraShaker.tscn")
 var damage_multiplier := 10.0
 
 

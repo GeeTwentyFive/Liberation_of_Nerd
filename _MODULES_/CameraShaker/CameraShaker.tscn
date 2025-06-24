@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://clstkkq6qi5uo"]
+
+[ext_resource type="Script" uid="uid://bxityxyk0y652" path="res://_MODULES_/CameraShaker/camera_shaker.gd" id="1_s86y2"]
+
+[node name="CameraShaker" type="Timer"]
+one_shot = true
+autostart = true
+script = ExtResource("1_s86y2")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]
