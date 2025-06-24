@@ -14,12 +14,10 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
-- FIX SHARKTEETH <- Make into Enemy adapter for GameManager?
 - Implement (from design doc):
-	- Bosses:
-		- Sharkteeth (5000 HP)
-		- Gunshot (10000 HP)
-		- Nerd (100000 HP)
+	- Boss: Gunshot (10000 HP)
+		- always rotated toward target
+		- circle 1s -> laser cast 0.5s -> shoot
 - Make Map (TileMap + enemies, weapons, & items):
 	- MENTION PASSIVE & ACTIVE IN ITEM ROOMS
 - Implement player power persistence (if player chooses loop):
@@ -34,6 +32,11 @@ TODO:
 	- ^ + AudioStreamPlayer2D
 	- ^ for railgun: scale sound length & depth based on damage
 - Music (General is chiller, boss is more IMPACTFUL)
+- FINAL BOSS:
+	- Nerd (100000 HP)
+	- Touhou finger attacks
+	- BANGER music
+	- Sfx & Vfx
 
 
 FOR V2.0 (after release):
