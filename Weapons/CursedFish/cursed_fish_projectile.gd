@@ -44,6 +44,7 @@ func _physics_process(delta: float) -> void:
 		$CollisionShape2D.disabled = true
 
 func _on_collider_body_entered(body: Node2D) -> void:
+	add_collision_exception_with(body)
 	if body is Enemy: body.hit(damage)
 	elif body == holder:
 		if holder.held_weapon is CursedFish:
