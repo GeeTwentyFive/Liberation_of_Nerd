@@ -5,8 +5,7 @@ extends Entity
 const DEFAULT_MOVE_SPEED = 200
 const CAMERA_SMOOTHING_MULTIPLIER = 0.1
 @onready var starting_weapon: Weapon = (
-	#preload("res://Weapons/DDD/DDD.tscn").instantiate()
-	preload("res://Weapons/CursedFish/CursedFish.tscn").instantiate()
+	preload("res://Weapons/DDD/DDD.tscn").instantiate()
 )
 var attack_damage_multiplier := 1.0
 
