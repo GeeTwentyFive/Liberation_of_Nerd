@@ -19,7 +19,14 @@ points = PackedVector2Array(0, 0, 180, 0)
 width = 1.0
 default_color = Color(1, 0, 0, 1)
 
+[node name="AimTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
 [node name="LifeTimer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
-autostart = true
+
+[connection signal="timeout" from="AimTimer" to="." method="_on_aim_timer_timeout"]
+[connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]

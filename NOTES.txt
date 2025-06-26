@@ -14,6 +14,7 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
+- Restore Sharkteeth, fix by inherit Enemy -> funnel
 - Implement (from design doc):
 	- Boss: Gunshot (10000 HP)
 		- circle -> (without stopping) laser cast 0.5s -> shoot
