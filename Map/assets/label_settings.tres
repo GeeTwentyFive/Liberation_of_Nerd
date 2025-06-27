@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://ctv5vjkhq65u2" path="res://Map/assets/Kenney Mini Square Mono.ttf" id="1_ed48m"]
 
 [resource]
-line_spacing = 0.0
+line_spacing = 1.0
 font = ExtResource("1_ed48m")
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
