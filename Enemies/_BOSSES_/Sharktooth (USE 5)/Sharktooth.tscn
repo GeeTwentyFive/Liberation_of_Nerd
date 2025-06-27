@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://chnn1a4ih45ml"]
 
 [ext_resource type="PackedScene" uid="uid://dcps58mngvkag" path="res://Enemies/EnemyBase.tscn" id="1_7ulfv"]
-[ext_resource type="Script" uid="uid://o6liokr14bfi" path="res://Enemies/_BOSSES_/Sharktooth (USE MULTIPLE)/sharktooth.gd" id="2_p2aab"]
+[ext_resource type="Script" uid="uid://o6liokr14bfi" path="res://Enemies/_BOSSES_/Sharktooth (USE 5)/sharktooth.gd" id="2_p2aab"]
 [ext_resource type="PackedScene" uid="uid://spnll70lgth6" path="res://Weapons/VibratingSharkTooth/VibratingSharkTooth.tscn" id="3_7riq6"]
-[ext_resource type="Texture2D" uid="uid://ets5n5he78fh" path="res://Enemies/_BOSSES_/Sharktooth (USE MULTIPLE)/assets/sharktooth.png" id="3_lqv4r"]
+[ext_resource type="Texture2D" uid="uid://ets5n5he78fh" path="res://Enemies/_BOSSES_/Sharktooth (USE 5)/assets/sharktooth.png" id="3_lqv4r"]
 [ext_resource type="PackedScene" uid="uid://tok0xxq3sarx" path="res://_MODULES_/Vibrator/Vibrator.tscn" id="3_uberv"]
 [ext_resource type="PackedScene" uid="uid://c4q776llgn1gf" path="res://_MODULES_/Lunger/Lunger.tscn" id="5_qryhc"]
 
