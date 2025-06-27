@@ -15,9 +15,6 @@ NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
 - Restore Sharkteeth, fix by inherit Enemy -> funnel
-- Implement (from design doc):
-	- Boss: Gunshot (10000 HP)
-		- circle -> (without stopping) laser cast 0.5s -> shoot
 - Make Map (TileMap + enemies, weapons, & items):
 	- MENTION PASSIVE & ACTIVE IN ITEM ROOMS
 - Implement player power persistence (if player chooses loop):
@@ -27,9 +24,7 @@ TODO:
 	4) Delete player in Map scene
 	5) Set obtained transform to moved player
 	6) Move moved player into reloaded Map scene
-- SFX:
-	- AudioStreamGenerator logn interp sine wave module
-	- ^ + AudioStreamPlayer2D
+- SFX: AudioStreamPlayer2D
 	- ^ for railgun: scale sound length & depth based on damage
 - Music (General is chiller, boss is more IMPACTFUL)
 - FINAL BOSS:
@@ -37,25 +32,3 @@ TODO:
 	- Touhou finger attacks
 	- BANGER music
 	- Sfx & Vfx
-
-
-FOR V2.0 (after release):
-	- REFACTOR GAME CODE:
-		- Create modules:
-			- LifeTimer (+ for CanvasItem in parent: modulate.a) (replace existing individual LifeTimer's)
-			- Shot (replace ElectromagnetBeam & ShootyThingamabobShot)
-			- Projectile (replace DDD, CursedFish, & BottomlessChickenPouch projectile)
-		- Duplicated sibling code
-		- Collision layers
-		- Instead of emitting attacked on holder, emit own signal and connect own emitted signal via GameManager to emit signal on holder - ...maybe also generalize holder...?
-		- ^ SIGNALIZE
-		- Parametrize sprite.modulate.a in DDD, CursedFish, & BottomlessChickenPouch pick_up override
-		- Make use() effects their own scenes (independent & modular)
-		- ?ACTIVATED_ALPHA for ItemBase?
-	- Map editor
-	- Multiplayer?
-	- Starting room:
-		- "Solo" pad
-		- "Multi" pad
-		- "Edit" pad
-		- "Exit" pad (ESC in-game goes to starting room)

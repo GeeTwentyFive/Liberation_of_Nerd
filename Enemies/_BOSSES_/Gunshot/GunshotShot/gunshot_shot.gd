@@ -15,18 +15,24 @@ func set_length(length: int):
 	return self
 
 func _process(delta: float) -> void:
-	$Line2D.modulate.a = remap(
-		$LifeTimer.time_left,
-		$LifeTimer.wait_time,
-		0,
-		1.0,
-		0.0
-	)
+	if not $LifeTimer.is_stopped():
+		$Line2D.modulate.a = remap(
+			$LifeTimer.time_left,
+			$LifeTimer.wait_time,
+			0,
+			1.0,
+			0.0
+		)
 
 func _on_aim_timer_timeout() -> void:
 	$Line2D.default_color = shot_color
-	for body in get_overlapping_bodies():
-		body.hit.emit()
+	(func():
+		collision_layer = collision_mask
+		await get_tree().physics_frame
+		for body in get_overlapping_bodies():
+			if body is Player:
+				body.hit.emit()
+	).call_deferred()
 	$LifeTimer.start()
 
 func _on_life_timer_timeout() -> void:

@@ -3,26 +3,32 @@ extends Enemy
 
 const DEFAULT_HEALTH = 10000
 const SHOT = preload("GunshotShot/GunshotShot.tscn")
-const SHOT_SPREAD = PI/2
+const SHOT_SPREAD = PI
 const SHOT_COUNT = 11
-const MAX_SHOT_LENGTH = 180
-const SHOT_OFFSET = 16
+const MAX_SHOT_LENGTH = 720
+const SHOT_OFFSET = 64
 const WALL_MASK = 0b00000000_00000000_00100000
 @export var drop = preload("res://Weapons/ShootyThingamabob/ShootyThingamabob.tscn")
 
 
 var shooting: bool = false
+var shot := false
 
 
 func _ready() -> void:
 	super()
 	health = DEFAULT_HEALTH
 	max_health = health
+	# TODO: Set $AttackTimer.wait_time to sum of shot timers * 2
 
 func _on_attack_timer_timeout() -> void:
-	shooting = true
+	shooting = !shooting
+	if shooting: shot = false
 
-func move():
+# Override sprite flip behavior
+func _physics_process(delta: float) -> void:
+	if not target: return
+	
 	var target_vector := (
 		target.global_position - global_position
 	)
@@ -34,7 +40,7 @@ func move():
 			move_speed
 		)
 	
-	else:
+	elif shooting and not shot:
 		# Create & rotate shots
 		var shots: Array[Area2D] = []
 		for shot_index in range(SHOT_COUNT):
@@ -70,5 +76,8 @@ func move():
 						shot.global_position
 					).length()
 				)
+			
+			# TODO: vvv do same for ShootyThingamabobShot
+			else: shot.set_length(MAX_SHOT_LENGTH)
 		
-		shooting = false
+		shot = true
