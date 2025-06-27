@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ets5n5he78fh"
-path="res://.godot/imported/sharktooth.png-5d7ddf167fd8796d23b6d1f892553766.ctex"
+path="res://.godot/imported/sharktooth.png-e3d190bd18d0cbd165f7e28f5be79e24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/_BOSSES_/Sharktooth/assets/sharktooth.png"
-dest_files=["res://.godot/imported/sharktooth.png-5d7ddf167fd8796d23b6d1f892553766.ctex"]
+source_file="res://Enemies/_BOSSES_/Sharktooth (USE MULTIPLE)/assets/sharktooth.png"
+dest_files=["res://.godot/imported/sharktooth.png-e3d190bd18d0cbd165f7e28f5be79e24.ctex"]
 
 [params]
 

@@ -28,8 +28,15 @@ func _physics_process(delta: float) -> void:
 	$Lunger.target_position = target.global_position
 
 func die():
-	var _drop = drop.instantiate()
-	_drop.global_position = global_position
-	get_parent().add_child(_drop)
+	# Don't drop if not last one
+	var last_one := true
+	for body in get_parent().get_children():
+		if body == self: continue
+		if body is Sharktooth: last_one = false
+	
+	if last_one:
+		var _drop = drop.instantiate()
+		_drop.global_position = global_position
+		get_parent().add_child(_drop)
 	
 	super()

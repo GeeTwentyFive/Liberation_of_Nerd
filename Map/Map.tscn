@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cw4sfeund3w7s" path="res://Player/Player.tscn" id="2_2623n"]
 [ext_resource type="PackedScene" uid="uid://bb8ey6wgx2ha2" path="res://Items/DemonsCurse/DemonsCurse.tscn" id="5_qtvud"]
 [ext_resource type="PackedScene" uid="uid://dvo5t0a2mlwb0" path="res://Items/ExpertLure/ExpertLure.tscn" id="6_nyy2o"]
-[ext_resource type="PackedScene" uid="uid://bjbpe4dbwd7ij" path="res://Enemies/_BOSSES_/Gunshot/Gunshot.tscn" id="7_6od3y"]
 [ext_resource type="PackedScene" uid="uid://bf81snco5lar4" path="res://Items/Electromagnet/Electromagnet.tscn" id="7_ypc4v"]
+[ext_resource type="PackedScene" uid="uid://chnn1a4ih45ml" path="res://Enemies/_BOSSES_/Sharktooth (USE MULTIPLE)/Sharktooth.tscn" id="8_6od3y"]
 [ext_resource type="PackedScene" uid="uid://cx7sqcxxnh4vb" path="res://Items/AngelsBlessing/AngelsBlessing.tscn" id="9_vxmom"]
 [ext_resource type="PackedScene" uid="uid://c0qyfsrx8rhk8" path="res://Items/AztecDeathWhistle/AztecDeathWhistle.tscn" id="11_cccvd"]
 
@@ -34,5 +34,17 @@ position = Vector2(81, 31)
 [node name="AngelsBlessing" parent="." instance=ExtResource("9_vxmom")]
 position = Vector2(56, 31)
 
-[node name="Gunshot" parent="." instance=ExtResource("7_6od3y")]
-position = Vector2(-116, 141)
+[node name="Sharktooth" parent="." instance=ExtResource("8_6od3y")]
+position = Vector2(-97, 137)
+
+[node name="Sharktooth2" parent="." instance=ExtResource("8_6od3y")]
+position = Vector2(-93, 112)
+
+[node name="Sharktooth3" parent="." instance=ExtResource("8_6od3y")]
+position = Vector2(-129, 113)
+
+[node name="Sharktooth4" parent="." instance=ExtResource("8_6od3y")]
+position = Vector2(-132, 138)
+
+[node name="Sharktooth5" parent="." instance=ExtResource("8_6od3y")]
+position = Vector2(-112, 87)

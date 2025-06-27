@@ -14,7 +14,6 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
-- Restore Sharkteeth, fix by inherit Enemy -> funnel
 - Make Map (TileMap + enemies, weapons, & items):
 	- MENTION PASSIVE & ACTIVE IN ITEM ROOMS
 - Implement player power persistence (if player chooses loop):
