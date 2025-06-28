@@ -14,20 +14,20 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
-- Make Map (TileMap + enemies, weapons, & items):
-	- MENTION PASSIVE & ACTIVE IN ITEM ROOMS
+- Make Map (Enemies, weapons, & items):
+- Sharkteeth
 - SFX: AudioStreamPlayer2D
 	- ^ for railgun: scale sound length & depth based on damage
 - Music (General is chiller, boss is more IMPACTFUL)
-- FINAL BOSS:
-	- Nerd (100000 HP)
-	- Touhou finger attacks
-	- BANGER music
-	- Sfx & Vfx
-- Implement player power persistence (if player chooses loop):
+- Make loop portal:
 	1) Move to parent node (GameManager)
 	2) Reload Map scene
 	3) Get transform of player in reloaded Map scene
 	4) Delete player in Map scene
 	5) Set obtained transform to moved player
 	6) Move moved player into reloaded Map scene
+- FINAL BOSS:
+	- Nerd (100000 HP)
+	- Touhou finger attacks
+	- BANGER music
+	- Sfx & Vfx
