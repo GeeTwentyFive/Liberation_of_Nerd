@@ -1,11 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://lateaxfts10v"]
 
 [ext_resource type="Script" uid="uid://deioonq8qrf06" path="res://game_manager.gd" id="1_kr420"]
-[ext_resource type="Texture2D" uid="uid://dbr0shufbqkg4" path="res://Map/assets/roguelikeDungeon_transparent.png" id="3_108xg"]
 [ext_resource type="PackedScene" uid="uid://dwsqcidjasrqm" path="res://Map/Map.tscn" id="3_au0an"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aelf4"]
+load_path = "res://.godot/imported/roguelikeDungeon_transparent.png-68f7a33e9ce03f4f315a31015ec5e211.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlecm"]
-texture = ExtResource("3_108xg")
+texture = SubResource("CompressedTexture2D_aelf4")
 separation = Vector2i(1, 1)
 18:0/0 = 0
 18:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)

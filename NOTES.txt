@@ -20,12 +20,11 @@ TODO:
 	- ^ for railgun: scale sound length & depth based on damage
 - Music (General is chiller, boss is more IMPACTFUL)
 - Make loop portal:
-	1) Move to parent node (GameManager)
+	1) Move player to parent node (GameManager)
 	2) Reload Map scene
-	3) Get transform of player in reloaded Map scene
-	4) Delete player in Map scene
-	5) Set obtained transform to moved player
-	6) Move moved player into reloaded Map scene
+	3) Delete new player in reloaded Map scene
+	4) Set moved/previous player's global pos. to 0,0
+	5) Move moved/previous player into reloaded Map scene
 - FINAL BOSS:
 	- Nerd (100000 HP)
 	- Touhou finger attacks
