@@ -35,6 +35,9 @@ func _ready() -> void:
 	$CollisionShape2D.shape = scaled_shape
 	$CollisionShape2D.position.x = scaled_shape.size.x / 2
 	
+	$AudioStreamPlayer2D.pitch_scale = 1/log(exp(1) * base_damage * damage_multiplier)
+	$AudioStreamPlayer2D.play()
+	
 	$LifeTimer.start(log(base_damage * damage_multiplier))
 	
 	await get_tree().physics_frame
