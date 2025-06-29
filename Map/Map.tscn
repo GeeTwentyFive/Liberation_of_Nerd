@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dwsqcidjasrqm"]
+[gd_scene load_steps=53 format=3 uid="uid://dwsqcidjasrqm"]
 
 [ext_resource type="Texture2D" uid="uid://dpj8w1xhfnhqn" path="res://Map/assets/Map.png" id="1_17lxq"]
 [ext_resource type="PackedScene" uid="uid://cw4sfeund3w7s" path="res://Player/Player.tscn" id="2_7s3fs"]
@@ -140,6 +140,18 @@ size = Vector2(527, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vrbmt"]
 size = Vector2(186.676, 374.766)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1ek5"]
+size = Vector2(5444.02, 337.997)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7uu1"]
+size = Vector2(3915, 414)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_562w7"]
+size = Vector2(3823, 4369)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0gdl"]
+size = Vector2(2706.1, 2727.31)
 
 [node name="Map" type="Sprite2D"]
 texture = ExtResource("1_17lxq")
@@ -378,5 +390,25 @@ position = Vector2(633.5, -917.5)
 rotation = 0.785398
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_vrbmt")
+
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="WALL_COLLIDERS"]
+position = Vector2(3474.25, 810.25)
+rotation = 0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_k1ek5")
+
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="WALL_COLLIDERS"]
+position = Vector2(3562.5, -1028)
+shape = SubResource("RectangleShape2D_b7uu1")
+
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="WALL_COLLIDERS"]
+position = Vector2(3608.5, 1435.5)
+shape = SubResource("RectangleShape2D_562w7")
+
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="WALL_COLLIDERS"]
+position = Vector2(1704.5, 1699)
+rotation = 0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_m0gdl")
 
 [node name="Player" parent="." instance=ExtResource("2_7s3fs")]
