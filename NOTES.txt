@@ -17,7 +17,6 @@ TODO:
 - Make Map:
 	- Bosses
 	- Enemies
-- Sharkteeth
 - SFX: AudioStreamPlayer2D
 	- ^ for railgun: scale sound length & depth based on damage
 - Music (General is chiller, boss is more IMPACTFUL)

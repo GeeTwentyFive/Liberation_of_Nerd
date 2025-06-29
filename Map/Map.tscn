@@ -322,13 +322,11 @@ shape = SubResource("RectangleShape2D_t64y5")
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(-619.25, -2463.25)
 rotation = -0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_b3jsu")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(-2662.25, -4509.75)
 rotation = -0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2q318")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="WALL_COLLIDERS"]
@@ -348,7 +346,6 @@ shape = SubResource("RectangleShape2D_s8uph")
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(-2824, -4074.5)
 rotation = -0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_kmgy4")
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="WALL_COLLIDERS"]
@@ -370,13 +367,11 @@ shape = SubResource("RectangleShape2D_7m04m")
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(-1556, -7910)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_rx05r")
 
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(-218.5, -8068)
 rotation = -0.261799
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tlvak")
 
 [node name="CollisionShape2D28" type="CollisionShape2D" parent="WALL_COLLIDERS"]
@@ -392,13 +387,11 @@ shape = SubResource("RectangleShape2D_u7bh7")
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(3335, -6391.5)
 rotation = -0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8x48j")
 
 [node name="CollisionShape2D31" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(3492.5, -4969.5)
 rotation = -0.261799
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_oaqmq")
 
 [node name="CollisionShape2D32" type="CollisionShape2D" parent="WALL_COLLIDERS"]
@@ -414,7 +407,6 @@ shape = SubResource("RectangleShape2D_riqoh")
 [node name="CollisionShape2D34" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(3144, -3177)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_c31by")
 
 [node name="CollisionShape2D35" type="CollisionShape2D" parent="WALL_COLLIDERS"]
@@ -430,7 +422,6 @@ shape = SubResource("RectangleShape2D_xecfs")
 [node name="CollisionShape2D37" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(922.5, -2785)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_4e4q7")
 
 [node name="CollisionShape2D38" type="CollisionShape2D" parent="WALL_COLLIDERS"]
@@ -450,13 +441,11 @@ shape = SubResource("ConvexPolygonShape2D_2623n")
 [node name="CollisionShape2D41" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(3939, -2299.5)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_q2727")
 
 [node name="CollisionShape2D42" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(3626.5, 95.5)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_j2jjv")
 
 [node name="CollisionShape2D43" type="CollisionShape2D" parent="WALL_COLLIDERS"]
@@ -482,13 +471,11 @@ shape = SubResource("RectangleShape2D_xd2yo")
 [node name="CollisionShape2D48" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(633.5, -917.5)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_vrbmt")
 
 [node name="CollisionShape2D49" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(3474.25, 810.25)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_k1ek5")
 
 [node name="CollisionShape2D50" type="CollisionShape2D" parent="WALL_COLLIDERS"]
@@ -502,7 +489,6 @@ shape = SubResource("RectangleShape2D_562w7")
 [node name="CollisionShape2D52" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(1704.5, 1699)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_m0gdl")
 
 [node name="CollisionShape2D53" type="CollisionShape2D" parent="WALL_COLLIDERS"]
@@ -512,7 +498,6 @@ shape = SubResource("RectangleShape2D_udhll")
 [node name="CollisionShape2D54" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(574, 52.5)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ivgfo")
 
 [node name="CollisionShape2D55" type="CollisionShape2D" parent="WALL_COLLIDERS"]
@@ -574,7 +559,6 @@ shape = SubResource("RectangleShape2D_sbr5n")
 [node name="CollisionShape2D69" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(1360.5, -1475.5)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_jh4ki")
 
 [node name="CollisionShape2D70" type="CollisionShape2D" parent="WALL_COLLIDERS"]
@@ -584,7 +568,6 @@ shape = SubResource("RectangleShape2D_at8kp")
 [node name="CollisionShape2D71" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(1360.5, -2051.5)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tv7vt")
 
 [node name="CollisionShape2D72" type="CollisionShape2D" parent="WALL_COLLIDERS"]
@@ -594,7 +577,6 @@ shape = SubResource("RectangleShape2D_7kmjm")
 [node name="CollisionShape2D73" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(602.25, -2461.25)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_21baa")
 
 [node name="CollisionShape2D74" type="CollisionShape2D" parent="WALL_COLLIDERS"]
