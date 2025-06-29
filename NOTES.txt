@@ -14,7 +14,9 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
-- Make Map (Enemies, weapons, & items):
+- Make Map:
+	- Bosses
+	- Enemies
 - Sharkteeth
 - SFX: AudioStreamPlayer2D
 	- ^ for railgun: scale sound length & depth based on damage
