@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxe8380ri086f"]
+[gd_scene load_steps=7 format=3 uid="uid://bxe8380ri086f"]
 
 [ext_resource type="PackedScene" uid="uid://dgyw63baqojrj" path="res://Weapons/WeaponBase.tscn" id="1_dhbx4"]
 [ext_resource type="Script" uid="uid://bpu5iqk6u03eh" path="res://Weapons/ShootyThingamabob/shooty_thingamabob.gd" id="2_yfhxf"]
 [ext_resource type="Texture2D" uid="uid://b71ami3vjma" path="res://Weapons/ShootyThingamabob/assets/shootythingamabob.png" id="3_yog2i"]
+[ext_resource type="AudioStream" uid="uid://cw0r48w4hfh4h" path="res://Weapons/ShootyThingamabob/assets/explosionCrunch_003.ogg" id="4_ujejo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yog2i"]
 radius = 4.0
@@ -26,5 +27,8 @@ texture = ExtResource("3_yog2i")
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ujejo")
 
-[node name="AttackCooldown" type="Timer" parent="." index="3"]
+[node name="AudioStreamPlayer2D" parent="." index="3"]
+stream = ExtResource("4_ujejo")
+
+[node name="AttackCooldown" type="Timer" parent="." index="4"]
 one_shot = true

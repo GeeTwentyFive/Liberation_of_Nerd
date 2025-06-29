@@ -15,6 +15,8 @@ func _ready() -> void:
 
 func attack(attack_direction: Vector2):
 	if $AttackCooldown.is_stopped():
+		$AudioStreamPlayer2D.play()
+		
 		# Create & rotate shot
 		var shots: Array[Area2D] = []
 		for shot_index in range(SHOT_COUNT):

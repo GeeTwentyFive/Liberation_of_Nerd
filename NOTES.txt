@@ -15,13 +15,12 @@ NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
 - SFX (AudioStreamPlayer2D):
-	- engineCircular0 for VibratingSharkTooth & Sharktooth
+	- engineCircular0 for Sharktooth
 	- spaceEngineLow0 for Demon's Curse AURA
 	- Item pickup
 	- Item drop/throw
 	- Item use
 	- Weapon swap
-	- Weapon shoot (Done: DDD)
 	- Enemy move
 	- Boss activated
 	- Enemy hit

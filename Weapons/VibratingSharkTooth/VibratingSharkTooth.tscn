@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://spnll70lgth6"]
+[gd_scene load_steps=9 format=3 uid="uid://spnll70lgth6"]
 
 [ext_resource type="PackedScene" uid="uid://dgyw63baqojrj" path="res://Weapons/WeaponBase.tscn" id="1_sgysr"]
 [ext_resource type="Texture2D" uid="uid://d13125egdkr8j" path="res://Weapons/VibratingSharkTooth/assets/vibratingsharktooth.png" id="2_8bb3o"]
 [ext_resource type="Script" uid="uid://vm6f0ogwckj3" path="res://Weapons/VibratingSharkTooth/vibrating_shark_tooth.gd" id="2_q82og"]
+[ext_resource type="AudioStream" uid="uid://dhkn804nhpxwf" path="res://Weapons/VibratingSharkTooth/assets/engineCircular_000.ogg" id="4_2maet"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_26w1v"]
 friction = 0.0
@@ -30,7 +31,10 @@ texture = ExtResource("2_8bb3o")
 [node name="CollisionShape2D" parent="PickupCollider" index="0"]
 shape = SubResource("CircleShape2D_2maet")
 
-[node name="EnemyCollider" type="Area2D" parent="." index="3"]
+[node name="AudioStreamPlayer2D" parent="." index="3"]
+stream = ExtResource("4_2maet")
+
+[node name="EnemyCollider" type="Area2D" parent="." index="4"]
 collision_layer = 0
 collision_mask = 16
 monitorable = false
@@ -38,7 +42,7 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyCollider" index="0"]
 shape = SubResource("CircleShape2D_ffq8k")
 
-[node name="AttackTimer" type="Timer" parent="." index="4"]
+[node name="AttackTimer" type="Timer" parent="." index="5"]
 process_callback = 0
 wait_time = 0.1
 one_shot = true

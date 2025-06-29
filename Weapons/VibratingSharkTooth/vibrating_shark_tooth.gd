@@ -27,6 +27,7 @@ func attack(attack_direction: Vector2):
 	super(attack_direction)
 
 func _on_attack_timer_timeout() -> void:
+	$AudioStreamPlayer2D.stop()
 	for body in $EnemyCollider.get_overlapping_bodies():
 		if body is Enemy:
 			body.hit(calculate_attack_damage())
