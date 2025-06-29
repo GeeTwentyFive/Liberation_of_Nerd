@@ -13,6 +13,7 @@ func _ready() -> void:
 	attack_damage = DEFAULT_ATTACK_DAMAGE
 
 func pick_up(player: Player):
+	if holder != null: return
 	super(player)
 	sprite.modulate.a = 0.5
 	boomerang_returned = true
