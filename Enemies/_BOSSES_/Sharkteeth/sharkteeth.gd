@@ -24,4 +24,5 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	# Only reached if all sharkteeth are null
-	get_parent().add_child(drop)
+	if drop.get_parent() != null:
+		get_parent().add_child(drop)
