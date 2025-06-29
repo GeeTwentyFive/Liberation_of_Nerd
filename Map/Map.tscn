@@ -1,7 +1,11 @@
-[gd_scene load_steps=83 format=3 uid="uid://dwsqcidjasrqm"]
+[gd_scene load_steps=87 format=3 uid="uid://dwsqcidjasrqm"]
 
 [ext_resource type="Texture2D" uid="uid://dpj8w1xhfnhqn" path="res://Map/assets/Map.png" id="1_17lxq"]
 [ext_resource type="PackedScene" uid="uid://cw4sfeund3w7s" path="res://Player/Player.tscn" id="2_7s3fs"]
+[ext_resource type="PackedScene" uid="uid://dvo5t0a2mlwb0" path="res://Items/ExpertLure/ExpertLure.tscn" id="4_qtvud"]
+[ext_resource type="PackedScene" uid="uid://bf81snco5lar4" path="res://Items/Electromagnet/Electromagnet.tscn" id="5_nyy2o"]
+[ext_resource type="PackedScene" uid="uid://bb8ey6wgx2ha2" path="res://Items/DemonsCurse/DemonsCurse.tscn" id="7_ypc4v"]
+[ext_resource type="PackedScene" uid="uid://cx7sqcxxnh4vb" path="res://Items/AngelsBlessing/AngelsBlessing.tscn" id="8_6od3y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7s3fs"]
 size = Vector2(543, 15)
@@ -628,5 +632,17 @@ shape = SubResource("RectangleShape2D_4hb1o")
 [node name="CollisionShape2D82" type="CollisionShape2D" parent="WALL_COLLIDERS"]
 position = Vector2(-257, -2939.5)
 shape = SubResource("RectangleShape2D_5m0kx")
+
+[node name="AngelsBlessing" parent="." instance=ExtResource("8_6od3y")]
+position = Vector2(-552, 180)
+
+[node name="DemonsCurse" parent="." instance=ExtResource("7_ypc4v")]
+position = Vector2(-1928, -444)
+
+[node name="ExpertLure" parent="." instance=ExtResource("4_qtvud")]
+position = Vector2(-2040, -1452)
+
+[node name="Electromagnet" parent="." instance=ExtResource("5_nyy2o")]
+position = Vector2(-2040, -2012)
 
 [node name="Player" parent="." instance=ExtResource("2_7s3fs")]
