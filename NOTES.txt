@@ -14,18 +14,12 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
-- Make Map:
-	- Bosses
-	- Enemies
 - SFX: AudioStreamPlayer2D
 	- ^ for railgun: scale sound length & depth based on damage
 - Music (General is chiller, boss is more IMPACTFUL)
-- Make loop portal:
-	1) Move player to parent node (GameManager)
-	2) Reload Map scene
-	3) Delete new player in reloaded Map scene
-	4) Set moved/previous player's global pos. to 0,0
-	5) Move moved/previous player into reloaded Map scene
+- Finish Map:
+	- Bosses
+	- Enemies
 - FINAL BOSS:
 	- Nerd (100000 HP)
 	- Touhou finger attacks
