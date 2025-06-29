@@ -9,6 +9,8 @@ var holder: Player
 
 
 func attack(attack_direction: Vector2):
+	if not $AudioStreamPlayer2D.playing:
+		$AudioStreamPlayer2D.play()
 	holder.attacked.emit()
 	pass # Override & implement
 

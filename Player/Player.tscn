@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cw4sfeund3w7s"]
+[gd_scene load_steps=8 format=3 uid="uid://cw4sfeund3w7s"]
 
 [ext_resource type="Script" uid="uid://stu6ior3stj1" path="res://Player/player.gd" id="1_84i0o"]
 [ext_resource type="PackedScene" uid="uid://dy74uem5hkkcd" path="res://EntityBase.tscn" id="1_tok1r"]
 [ext_resource type="Texture2D" uid="uid://b7ab8q4wfhe4d" path="res://Player/assets/player_sprite.png" id="1_udipg"]
+[ext_resource type="AudioStream" uid="uid://pya3dbb31uh7" path="res://Player/assets/footstep05.ogg" id="4_ddoul"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tok1r"]
 friction = 0.0
@@ -39,5 +40,8 @@ current = true
 
 [node name="Camera2D" type="Camera2D" parent="." index="4"]
 position_smoothing_enabled = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="5"]
+stream = ExtResource("4_ddoul")
 
 [connection signal="body_entered" from="HurtCollider" to="." method="_on_hurt_collider_body_entered"]

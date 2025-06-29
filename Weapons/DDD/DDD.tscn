@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://w3n6auj14eml"]
+[gd_scene load_steps=8 format=3 uid="uid://w3n6auj14eml"]
 
 [ext_resource type="PackedScene" uid="uid://dgyw63baqojrj" path="res://Weapons/WeaponBase.tscn" id="1_sal74"]
 [ext_resource type="Script" uid="uid://btatl4rv4e6ws" path="res://Weapons/DDD/ddd.gd" id="2_kk7xq"]
 [ext_resource type="Texture2D" uid="uid://c23t2d3s3110h" path="res://Weapons/DDD/assets/fist.png" id="3_be0ai"]
+[ext_resource type="AudioStream" uid="uid://bkqdi0pulqea8" path="res://Weapons/DDD/assets/impactPlank_medium_004.ogg" id="4_c7buv"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_26w1v"]
 friction = 0.0
@@ -28,5 +29,8 @@ texture = ExtResource("3_be0ai")
 [node name="CollisionShape2D" parent="PickupCollider" index="0"]
 shape = SubResource("CircleShape2D_fi61u")
 
-[node name="AttackCooldown" type="Timer" parent="." index="3"]
+[node name="AudioStreamPlayer2D" parent="." index="3"]
+stream = ExtResource("4_c7buv")
+
+[node name="AttackCooldown" type="Timer" parent="." index="4"]
 one_shot = true

@@ -14,8 +14,17 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
-- SFX: AudioStreamPlayer2D
-	- ^ for railgun: scale sound length & depth based on damage
+- SFX (AudioStreamPlayer2D):
+	- engineCircular0 for VibratingSharkTooth & Sharktooth
+	- spaceEngineLow0 for Demon's Curse AURA
+	- Item pickup
+	- Item drop/throw
+	- Item use
+	- Weapon swap
+	- Weapon shoot (Done: DDD)
+	- Enemy move
+	- Boss activated
+	- Enemy hit
 - Music (General is chiller, boss is more IMPACTFUL)
 - Finish Map:
 	- Bosses

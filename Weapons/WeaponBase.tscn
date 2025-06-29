@@ -20,4 +20,6 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupCollider" index="0"]
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
+
 [connection signal="body_entered" from="PickupCollider" to="." method="_on_pickup_collider_body_entered"]

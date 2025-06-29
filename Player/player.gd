@@ -5,8 +5,8 @@ extends Entity
 const DEFAULT_MOVE_SPEED = 200
 const CAMERA_SMOOTHING_MULTIPLIER = 0.1
 @onready var starting_weapon: Weapon = (
-	preload("res://Weapons/DDD/DDD.tscn").instantiate()
-	#preload("res://Weapons/ShootyThingamabob/ShootyThingamabob.tscn").instantiate()
+	#preload("res://Weapons/DDD/DDD.tscn").instantiate()
+	preload("res://Weapons/CursedFish/CursedFish.tscn").instantiate()
 )
 var attack_damage_multiplier := 1.0
 
@@ -44,5 +44,8 @@ func _physics_process(delta: float) -> void:
 		"move_up",
 		"move_down"
 	)
-	apply_central_force(movement_direction * move_speed)
+	if movement_direction:
+		apply_central_force(movement_direction * move_speed)
+		if not $AudioStreamPlayer2D.playing:
+			$AudioStreamPlayer2D.play()
 	super(delta)
