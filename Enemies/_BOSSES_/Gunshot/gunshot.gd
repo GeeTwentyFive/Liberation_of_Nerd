@@ -25,6 +25,13 @@ func _on_attack_timer_timeout() -> void:
 	shooting = !shooting
 	if shooting: shot = false
 
+func die():
+	var _drop = drop.instantiate()
+	_drop.global_position = global_position
+	get_parent().add_child(_drop)
+	
+	super()
+
 # Override sprite flip behavior
 func _physics_process(delta: float) -> void:
 	if not target: return

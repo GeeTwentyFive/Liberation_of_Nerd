@@ -7,6 +7,7 @@ const CAMERA_SMOOTHING_MULTIPLIER = 0.1
 @onready var starting_weapon: Weapon = (
 	preload("res://Weapons/DDD/DDD.tscn").instantiate()
 	#preload("res://Weapons/VibratingSharkTooth/VibratingSharkTooth.tscn").instantiate()
+	#preload("res://Weapons/ShootyThingamabob/ShootyThingamabob.tscn").instantiate()
 )
 var attack_damage_multiplier := 1.0
 
