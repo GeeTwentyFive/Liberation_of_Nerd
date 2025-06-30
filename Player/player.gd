@@ -47,6 +47,7 @@ func _physics_process(delta: float) -> void:
 	)
 	if movement_direction:
 		apply_central_force(movement_direction * move_speed)
-		if not $AudioStreamPlayer2D.playing:
-			$AudioStreamPlayer2D.play()
+		$AudioStreamPlayer.pitch_scale = movement_direction.length()
+		if not $AudioStreamPlayer.playing:
+			$AudioStreamPlayer.play()
 	super(delta)
