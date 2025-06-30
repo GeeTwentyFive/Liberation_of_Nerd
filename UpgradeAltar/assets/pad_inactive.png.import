@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfuv1qwjwuwns"
-path="res://.godot/imported/pad_active.png-1849f23c9140ef09fa8ab7f851155ec1.ctex"
+uid="uid://caj4ik8wfjije"
+path="res://.godot/imported/pad_inactive.png-a1e31dc315a96efe0873caf8b8d1f61e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_MODULES_/UpgradeAltar/assets/pad_active.png"
-dest_files=["res://.godot/imported/pad_active.png-1849f23c9140ef09fa8ab7f851155ec1.ctex"]
+source_file="res://UpgradeAltar/assets/pad_inactive.png"
+dest_files=["res://.godot/imported/pad_inactive.png-a1e31dc315a96efe0873caf8b8d1f61e.ctex"]
 
 [params]
 

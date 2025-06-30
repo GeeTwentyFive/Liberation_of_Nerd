@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqpaffg5aclch"
-path="res://.godot/imported/leftarrow.png-60f08e1595a6022f39257e3b7447a2d3.ctex"
+uid="uid://cfuv1qwjwuwns"
+path="res://.godot/imported/pad_active.png-aa3bd4098095085c51710aaacbbaf006.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_MODULES_/UpgradeAltar/assets/leftarrow.png"
-dest_files=["res://.godot/imported/leftarrow.png-60f08e1595a6022f39257e3b7447a2d3.ctex"]
+source_file="res://UpgradeAltar/assets/pad_active.png"
+dest_files=["res://.godot/imported/pad_active.png-aa3bd4098095085c51710aaacbbaf006.ctex"]
 
 [params]
 

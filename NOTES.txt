@@ -24,10 +24,8 @@ TODO:
 	- Enemy move
 	- Boss activated
 	- Enemy hit
+- Populate map with enemies
 - Music (General is chiller, boss is more IMPACTFUL)
-- Finish Map:
-	- Bosses
-	- Enemies
 - FINAL BOSS:
 	- Nerd (100000 HP)
 	- Touhou finger attacks

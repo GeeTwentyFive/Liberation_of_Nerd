@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://br3v1wribe6qv"]
 
-[ext_resource type="Script" uid="uid://ce8egfnjuk5tp" path="res://_MODULES_/UpgradeAltar/upgrade_altar.gd" id="1_edai0"]
-[ext_resource type="Texture2D" uid="uid://caj4ik8wfjije" path="res://_MODULES_/UpgradeAltar/assets/pad_inactive.png" id="2_n7rc3"]
-[ext_resource type="Texture2D" uid="uid://dqpaffg5aclch" path="res://_MODULES_/UpgradeAltar/assets/leftarrow.png" id="3_88k8m"]
+[ext_resource type="Script" uid="uid://ce8egfnjuk5tp" path="res://UpgradeAltar/upgrade_altar.gd" id="1_edai0"]
+[ext_resource type="Texture2D" uid="uid://caj4ik8wfjije" path="res://UpgradeAltar/assets/pad_inactive.png" id="2_n7rc3"]
+[ext_resource type="Texture2D" uid="uid://dqpaffg5aclch" path="res://UpgradeAltar/assets/leftarrow.png" id="3_88k8m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_edai0"]
 radius = 16.0
