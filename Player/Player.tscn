@@ -41,11 +41,7 @@ current = true
 [node name="Camera2D" type="Camera2D" parent="." index="4"]
 position_smoothing_enabled = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="5"]
-visible = false
-stream = ExtResource("4_ddoul")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="6"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="5"]
 stream = ExtResource("4_ddoul")
 
 [connection signal="body_entered" from="HurtCollider" to="." method="_on_hurt_collider_body_entered"]
