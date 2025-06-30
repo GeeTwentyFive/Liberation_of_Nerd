@@ -67,7 +67,7 @@ func _physics_process(delta: float) -> void:
 				holder.collision_shape.shape.get_rect().size
 			)
 			rotation = attack_direction.angle()
-			attack(attack_direction)
+			attack(attack_direction.normalized())
 	
 	else:
 		super(delta)
