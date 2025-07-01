@@ -709,3 +709,45 @@ position = Vector2(-1100, -1475)
 
 [node name="Demon3" parent="." instance=ExtResource("15_0g0qh")]
 position = Vector2(-1100, -2036)
+
+[node name="Demon4" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(-1700, -2035)
+
+[node name="Cultist2" parent="." instance=ExtResource("17_t64y5")]
+position = Vector2(-1700, -2035)
+
+[node name="Demon5" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(-1400, -2100)
+
+[node name="Demon6" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(-1400, -2000)
+
+[node name="Demon7" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(-1400, -1900)
+
+[node name="Ghost3" parent="." instance=ExtResource("16_t64y5")]
+position = Vector2(-1400, -1800)
+
+[node name="Ghost4" parent="." instance=ExtResource("16_t64y5")]
+position = Vector2(-1400, -2200)
+
+[node name="Demon8" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(-1700, -1475)
+
+[node name="Cultist3" parent="." instance=ExtResource("17_t64y5")]
+position = Vector2(-1700, -1475)
+
+[node name="Demon9" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(-1400, -1600)
+
+[node name="Demon10" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(-1400, -1500)
+
+[node name="Demon11" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(-1400, -1400)
+
+[node name="Ghost5" parent="." instance=ExtResource("16_t64y5")]
+position = Vector2(-1400, -1300)
+
+[node name="Ghost6" parent="." instance=ExtResource("16_t64y5")]
+position = Vector2(-1400, -1700)
