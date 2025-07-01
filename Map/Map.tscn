@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://dwsqcidjasrqm"]
+[gd_scene load_steps=98 format=3 uid="uid://dwsqcidjasrqm"]
 
 [ext_resource type="Texture2D" uid="uid://dpj8w1xhfnhqn" path="res://Map/assets/Map.png" id="1_17lxq"]
 [ext_resource type="PackedScene" uid="uid://cw4sfeund3w7s" path="res://Player/Player.tscn" id="2_7s3fs"]
@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://bax31bel402kg" path="res://Enemies/Chicken/Chicken.tscn" id="12_ehio4"]
 [ext_resource type="PackedScene" uid="uid://w6ad3pxjnfna" path="res://Enemies/Goat/Goat.tscn" id="13_7a0j3"]
 [ext_resource type="PackedScene" uid="uid://daq1mabot7ijw" path="res://Enemies/Cow/Cow.tscn" id="14_0g0qh"]
+[ext_resource type="PackedScene" uid="uid://chkwg63k5u453" path="res://Enemies/Demon/Demon.tscn" id="15_0g0qh"]
+[ext_resource type="PackedScene" uid="uid://d2f2pdbqtm873" path="res://Enemies/Ghost/Ghost.tscn" id="16_t64y5"]
+[ext_resource type="PackedScene" uid="uid://bdd4vci1aakbe" path="res://Enemies/Cultist/Cultist.tscn" id="17_t64y5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7s3fs"]
 size = Vector2(543, 15)
@@ -688,3 +691,21 @@ position = Vector2(-1100, -300)
 
 [node name="Chicken7" parent="." instance=ExtResource("12_ehio4")]
 position = Vector2(-1100, -200)
+
+[node name="Demon" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(0, -1500)
+
+[node name="Ghost" parent="." instance=ExtResource("16_t64y5")]
+position = Vector2(100, -1500)
+
+[node name="Ghost2" parent="." instance=ExtResource("16_t64y5")]
+position = Vector2(-100, -1500)
+
+[node name="Cultist" parent="." instance=ExtResource("17_t64y5")]
+position = Vector2(0, -1550)
+
+[node name="Demon2" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(-1100, -1475)
+
+[node name="Demon3" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(-1100, -2036)
