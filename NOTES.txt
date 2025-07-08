@@ -14,9 +14,10 @@ GameManager is for component composition and dependency injection
 NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
+- Populate map with enemies
+- Final boss
 - SFX (AudioStreamPlayer2D):
 	- engineCircular0 for Sharktooth
-	- spaceEngineLow0 for Demon's Curse AURA
 	- Item pickup
 	- Item drop/throw
 	- Item use
@@ -24,10 +25,3 @@ TODO:
 	- Enemy move
 	- Boss activated
 	- Enemy hit
-- Populate map with enemies
-- BOSS MUSIC
-- FINAL BOSS:
-	- Nerd (100000 HP)
-	- Touhou finger attacks
-	- BANGER music
-	- Sfx & Vfx
