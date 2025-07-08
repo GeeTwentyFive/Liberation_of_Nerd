@@ -15,7 +15,7 @@ NO PROJECTILE SPEED - just inherit player's linear velocity
 
 TODO:
 - Populate map with enemies
-- Final boss
+- Final boss (-PI/4 circle + finger projectiles)
 - SFX (AudioStreamPlayer2D):
 	- engineCircular0 for Sharktooth
 	- Item pickup
