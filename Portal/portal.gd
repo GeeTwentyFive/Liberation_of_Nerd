@@ -22,9 +22,15 @@ func _on_body_entered(body: Node2D) -> void:
 			old_map.queue_free()
 			await get_tree().process_frame
 		get_parent().add_child(MAP.instantiate())
+		while get_parent().get_node("Map") == null:
+			await get_tree().process_frame
+		while get_parent().get_node("Map").get_node("Player") == null:
+			await get_tree().process_frame
 		var new_player = get_parent().get_node("Map").get_node("Player")
 		while new_player:
 			new_player.queue_free()
+			await get_tree().process_frame
+		while get_parent().get_node("Map").get_node("DDD") == null:
 			await get_tree().process_frame
 		var new_DDD = get_parent().get_node("Map").get_node("DDD")
 		while new_DDD:

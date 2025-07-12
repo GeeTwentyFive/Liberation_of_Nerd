@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://dwsqcidjasrqm"]
+[gd_scene load_steps=99 format=3 uid="uid://dwsqcidjasrqm"]
 
 [ext_resource type="Texture2D" uid="uid://dpj8w1xhfnhqn" path="res://Map/assets/Map.png" id="1_17lxq"]
 [ext_resource type="PackedScene" uid="uid://cw4sfeund3w7s" path="res://Player/Player.tscn" id="2_7s3fs"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://chkwg63k5u453" path="res://Enemies/Demon/Demon.tscn" id="15_0g0qh"]
 [ext_resource type="PackedScene" uid="uid://d2f2pdbqtm873" path="res://Enemies/Ghost/Ghost.tscn" id="16_t64y5"]
 [ext_resource type="PackedScene" uid="uid://bdd4vci1aakbe" path="res://Enemies/Cultist/Cultist.tscn" id="17_t64y5"]
+[ext_resource type="PackedScene" uid="uid://br3v1wribe6qv" path="res://UpgradeAltar/UpgradeAltar.tscn" id="19_2q318"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7s3fs"]
 size = Vector2(543, 15)
@@ -626,6 +627,9 @@ shape = SubResource("RectangleShape2D_4hb1o")
 position = Vector2(-257, -2939.5)
 shape = SubResource("RectangleShape2D_5m0kx")
 
+[node name="UpgradeAltar" parent="." instance=ExtResource("19_2q318")]
+position = Vector2(0, -6336)
+
 [node name="AngelsBlessing" parent="." instance=ExtResource("8_6od3y")]
 position = Vector2(-552, 180)
 
@@ -637,8 +641,6 @@ position = Vector2(-2040, -1452)
 
 [node name="Electromagnet" parent="." instance=ExtResource("5_nyy2o")]
 position = Vector2(-2040, -2012)
-
-[node name="Player" parent="." instance=ExtResource("2_7s3fs")]
 
 [node name="Boris" parent="." instance=ExtResource("7_6od3y")]
 position = Vector2(0, -1100)
@@ -751,3 +753,65 @@ position = Vector2(-1400, -1300)
 
 [node name="Ghost6" parent="." instance=ExtResource("16_t64y5")]
 position = Vector2(-1400, -1700)
+
+[node name="Chicken8" parent="." instance=ExtResource("12_ehio4")]
+position = Vector2(-498, -3380)
+
+[node name="Chicken10" parent="." instance=ExtResource("12_ehio4")]
+position = Vector2(-215, -3310)
+
+[node name="Chicken11" parent="." instance=ExtResource("12_ehio4")]
+position = Vector2(-28, -3553)
+
+[node name="Chicken12" parent="." instance=ExtResource("12_ehio4")]
+position = Vector2(191, -3345)
+
+[node name="Chicken13" parent="." instance=ExtResource("12_ehio4")]
+position = Vector2(174, -3562)
+
+[node name="Chicken14" parent="." instance=ExtResource("12_ehio4")]
+position = Vector2(450, -3322)
+
+[node name="Cow5" parent="." instance=ExtResource("14_0g0qh")]
+position = Vector2(-238, -3515)
+
+[node name="Cow6" parent="." instance=ExtResource("14_0g0qh")]
+position = Vector2(332, -3536)
+
+[node name="Cow7" parent="." instance=ExtResource("14_0g0qh")]
+position = Vector2(-17, -3425)
+
+[node name="Cultist4" parent="." instance=ExtResource("17_t64y5")]
+position = Vector2(-349, -3454)
+
+[node name="Cultist5" parent="." instance=ExtResource("17_t64y5")]
+position = Vector2(457, -3468)
+
+[node name="Demon12" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(-283, -3383)
+
+[node name="Demon13" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(396, -3388)
+
+[node name="Demon14" parent="." instance=ExtResource("15_0g0qh")]
+position = Vector2(2, -3366)
+
+[node name="Ghost7" parent="." instance=ExtResource("16_t64y5")]
+position = Vector2(-583, -3255)
+
+[node name="Ghost8" parent="." instance=ExtResource("16_t64y5")]
+position = Vector2(-550, -3194)
+
+[node name="Ghost9" parent="." instance=ExtResource("16_t64y5")]
+position = Vector2(608, -3272)
+
+[node name="Ghost10" parent="." instance=ExtResource("16_t64y5")]
+position = Vector2(561, -3206)
+
+[node name="Goat3" parent="." instance=ExtResource("13_7a0j3")]
+position = Vector2(-102, -3307)
+
+[node name="Goat4" parent="." instance=ExtResource("13_7a0j3")]
+position = Vector2(89, -3307)
+
+[node name="Player" parent="." instance=ExtResource("2_7s3fs")]

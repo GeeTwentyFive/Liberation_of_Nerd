@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://81sjb80caves"]
+
+[ext_resource type="PackedScene" uid="uid://dcps58mngvkag" path="res://Enemies/EnemyBase.tscn" id="1_i1wfp"]
+[ext_resource type="Script" uid="uid://bdfsw7twn83im" path="res://Enemies/_BOSSES_/Nerd/nerd.gd" id="2_011ju"]
+
+[node name="Nerd" instance=ExtResource("1_i1wfp")]
+script = ExtResource("2_011ju")
